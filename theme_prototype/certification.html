@@ -1,112 +1,163 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications - Eatery Essentials | GFSI, BRC, SQF Certified</title>
-    <meta name="description" content="Eatery Essentials is BRC, ISO-22000, FSSC-22000, and HACCP certified. Our manufacturing facility in Dallas, TX meets the highest GFSI standards.">
+    <title>Certifications - Eatery Essentials | GFSI, BRCGS, SQF Certified</title>
+    <meta name="description"
+        content="Eatery Essentials is BRCGS, ISO-22000, FSSC-22000, and HACCP certified. Our manufacturing facility in Dallas, TX meets the highest GFSI standards.">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Montserrat:wght@600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .intro-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .cert-card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .cert-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-        }
-
-        .cert-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .cert-img-wrap {
-            padding: 2rem;
-            background: #f9fafb;
-            height: 320px;
+        .cert-hero {
+            background: linear-gradient(rgba(10, 15, 28, 0.7), rgba(10, 15, 28, 0.7)), url('assets/images/cover-Grab-N-Go.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
         }
 
-        .cert-img-wrap img {
-            max-height: 100%;
-            width: auto;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        .cert-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
         }
 
-        .cert-info {
-            padding: 1.5rem;
+        .cert-intro {
+            padding: 5rem 0 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .factory-gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 4rem;
+        .cert-intro h2 {
+            font-size: 2.25rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
         }
 
-        .factory-img {
+        .cert-intro p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-info-card {
+            background: var(--white);
+            border: 1px solid var(--border);
             border-radius: var(--radius-lg);
-            overflow: hidden;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            align-items: start;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cert-info-card:hover {
+            transform: translateY(-5px);
             box-shadow: var(--shadow-md);
         }
 
-        .factory-img img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            display: block;
+        .cert-badge-wrap {
+            text-align: center;
+        }
+
+        .cert-badge-wrap img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .cert-details h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cert-details ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem;
+        }
+
+        .cert-details li {
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cert-details li strong {
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .cert-details li span {
+            color: var(--text-secondary);
+        }
+
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
         }
 
         .compliance-box {
             background: var(--bg-light);
-            padding: 3rem;
-            border-radius: var(--radius-xl);
-            margin-top: 4rem;
-            border-left: 5px solid var(--secondary);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
         }
 
-        @media (max-width: 992px) {
+        .compliance-box h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
 
-            .intro-grid,
-            .factory-gallery {
+        .compliance-box p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .cert-info-card {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                padding: 2rem;
             }
 
-            .intro-grid div:nth-child(2) {
-                text-align: center !important;
-                order: -1;
+            .cert-badge-wrap {
+                max-width: 200px;
+                margin: 0 auto;
             }
 
-            .cert-hero h1 {
-                font-size: 2.25rem;
-            }
-
-            .compliance-box {
-                padding: 2rem 1.5rem;
-            }
-
-            .factory-img img {
-                height: 300px;
+            .compliance-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -121,7 +172,7 @@
                     <img src="assets/images/logo-blue_green.png" alt="Eatery Essentials">
                 </a>
             </div>
-            <nav class="main-nav">
+                                                                                                <nav class="main-nav">
                 <ul class="menu">
                     <li class="menu-item"><a href="news.html">NEWS</a></li>
                     <li class="menu-item menu-item-has-children">
@@ -129,31 +180,34 @@
                         <ul class="sub-menu">
                             <li class="menu-item"><a href="products.html">All Products</a></li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="koda-cup-line.html">Koda Cup Line</a>
+                                <a href="products.html">Shop By Type</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="category/kodacup-pet-clear-cups.html">PET Clear
-                                            Cups</a></li>
-                                    <li class="menu-item"><a href="category/kodacup-deli-containers.html">Round Deli
-                                            Containers</a></li>
-                                    <li class="menu-item"><a href="category/kodacup-hinged-lid-containers.html">Hinged
-                                            Containers</a></li>
-                                    <li class="menu-item"><a href="category/kodacup-clear-salad-bowls.html">Plastic
-                                            Salad Bowls</a></li>
-                                    <li class="menu-item"><a href="category/kodacup-cake-bakery-containers.html">Cake
-                                            and Bakery Containers</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-pet-clear-cups.html">Clear Cups</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-deli-containers.html">Round Deli Containers</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-hinged-lid-containers.html">Hinged Containers</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-clear-salad-bowls.html">Plastic Salad Bowls</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-cake-bakery-containers.html">Cake & Bakery</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="category/grab-go.html">Grab &amp; Go</a>
+                                <a href="category/but-n-loc.html">Shop By Lid</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="category/grab-go.html#film-seal">Film Seal</a></li>
-                                    <li class="menu-item"><a href="category/grab-go.html">Sandwich Wedge &amp; Wraps</a>
-                                    </li>
-                                    <li class="menu-item"><a href="category/grab-go.html">Multi-Compartment
-                                            Containers</a></li>
+                                    <li class="menu-item"><a href="category/but-n-loc.html">Tamper Evident</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-hinged-lid-containers.html">Hinged Lid</a></li>
+                                    <li class="menu-item"><a href="products.html#vented-lids">Vented Lid</a></li>
+                                    <li class="menu-item"><a href="products.html#dome-flat-lids">Dome & Flat Lids</a></li>
                                 </ul>
                             </li>
-                            
+                            <li class="menu-item menu-item-has-children">
+                                <a href="products.html#size-medium">Shop By Size</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="products.html#size-small">Under 10 oz</a></li>
+                                    <li class="menu-item"><a href="products.html#size-medium">12 oz - 16 oz</a></li>
+                                    <li class="menu-item"><a href="products.html#size-large">20 oz - 32 oz</a></li>
+                                    <li class="menu-item"><a href="products.html#size-xl">40 oz +</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="but-n-loc-closing-machine.html">BUT-N-LOC Closing Machine</a></li>
                         </ul>
                     </li>
                     <li class="menu-item"><a href="sustainability.html">SUSTAINABILITY</a></li>
@@ -161,9 +215,8 @@
                         <a href="catalog.html">RESOURCES</a>
                         <ul class="sub-menu">
                             <li class="menu-item"><a href="catalog.html">Catalog</a></li>
-                            <li class="menu-item"><a href="sales-sheets.html">Sales Sheets</a></li>
-                            <li class="menu-item"><a href="customer-reference-documents.html">Customer Reference
-                                    Documents</a></li>
+                            <li class="menu-item"><a href="sales-documents.html">Sales Documents</a></li>
+                            <li class="menu-item"><a href="customer-reference-documents.html">Customer Reference Documents</a></li>
                             <li class="menu-item"><a href="instructional-videos.html">Instructional Videos</a></li>
                         </ul>
                     </li>
@@ -180,7 +233,8 @@
             </nav>
             <div class="header-actions">
                 <a href="https://crm.eateryessentials.com/sample" class="btn">Request Samples</a>
-                <button class="search-icon-btn" aria-label="Open Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <button class="search-icon-btn" aria-label="Open Search"><svg width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2.5">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg></button>
@@ -195,100 +249,118 @@
 
     <!-- Page Hero -->
     <section class="cert-hero">
-        <div class="container">
-            <h1>Certifications</h1>
-            <p style="font-size: 1.25rem; opacity: 0.9;">Global Standards of Excellence in Food Safety</p>
+        <div class="container reveal">
+            <h1>Certification</h1>
         </div>
     </section>
 
-    <div class="content-wrapper" style="padding: 5rem 0;">
-        <div class="container">
-            <!-- Intro Section -->
-            <div class="intro-grid">
-                <div class="reveal">
-                    <span class="section-subtitle">Food Safety First</span>
-                    <h2 class="section-title">Quality Control &amp; Manufacturing Standards</h2>
-                    <p style="margin-bottom: 1.5rem;">We take quality control seriously. We manufacture our products
-                        with state of the art equipment, highest quality raw materials, and implement the highest
-                        standards of Good Manufacturing Practices. Our labs test product from each production run to
-                        ensure our customers receive product that meet promised expectations.</p>
-                    <p>In order to provide a packaging solution customized to various needs and requirements, our
-                        production facility is certified and accredited with BRC, ISO-22000, FSSC-22000, and HACCP
-                        standard operating system and quality fundamentals. <strong>FSS-C22000 &amp; BRC Certifications make
-                            us Global Food Safety Initiative (GFSI) certified.</strong></p>
-                </div>
-                <div class="reveal reveal-delay-2" style="text-align: right;">
-                    <img src="assets/images/logo-blue_green.png" alt="Eatery Essentials" style="max-width: 280px;">
-                </div>
+    <!-- Main Content -->
+    <main class="container">
+
+        <div class="cert-intro reveal">
+            <h2>Quality & Standards</h2>
+            <p>We take quality control seriously. We manufacture our products with state of the art equipment, highest
+                quality raw materials, and implement the highest standards of <strong>Good Manufacturing
+                    Practices</strong>. Our labs test product from each production run to ensure our customers receive
+                product that meet promised expectations.</p>
+            <p>Our production facility is certified and accredited with <strong>BRCGS, ISO-22000, FSSC-22000, and
+                    HACCP</strong> standard operating system and quality fundamentals.</p>
+        </div>
+
+        <!-- BRCGS -->
+        <div class="cert-info-card reveal">
+            <div class="cert-badge-wrap">
+                <img src="https://eateryessentials.com/wp-content/uploads/2025/08/REC27-P_Certificate_BRC-PK-173_2025_Final-scaled.jpg"
+                    alt="BRCGS Certificate">
             </div>
-
-            <!-- Certification Cards -->
-            <div class="cert-card-grid">
-                <div class="cert-card reveal">
-                    <div class="cert-img-wrap">
-                        <img src="assets/images/REC27-P_Certificate_BRC-PK-173_2025_Final-scaled.jpg" alt="BRC Certification">
-                    </div>
-                    <div class="cert-info">
-                        <h4 style="font-weight: 700;">BRC Certification</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Eatery
-                            Essentials BRCGS for Packaging Materials</p>
-                        <a href="https://eateryessentials.com/wp-content/uploads/2025/10/REC27-P_Certificate_BRC-PK-173_2025_Final.pdf" class="btn btn-secondary btn-sm" target="_blank">View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal reveal-delay-1">
-                    <div class="cert-img-wrap">
-                        <img src="assets/images/Page-from-NJ-RC-Certification.png" alt="NJ Recycled Content">
-                    </div>
-                    <div class="cert-info">
-                        <h4 style="font-weight: 700;">NJ Recycled Registration</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">New Jersey
-                            Recycled Content Registration</p>
-                        <a href="https://eateryessentials.com/wp-content/uploads/2024/09/NJ-RC-Certification.pdf" class="btn btn-secondary btn-sm" target="_blank">View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal reveal-delay-2">
-                    <div class="cert-img-wrap">
-                        <img src="assets/images/ASI-Certificate-EE-Dallas-QB-10.09.2025.jpg" alt="SQF Certification">
-                    </div>
-                    <div class="cert-info">
-                        <h4 style="font-weight: 700;">SQF Certification</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Eatery
-                            Essentials SQF Food Safety Code</p>
-                        <a href="https://eateryessentials.com/wp-content/uploads/2025/11/ASI-Certificate-EE-Dallas-QB-10.09.2025.pdf" class="btn btn-secondary btn-sm" target="_blank">View Certificate</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Compliance Section -->
-            <div class="compliance-box reveal">
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">FDA Compliance</h3>
-                <p style="font-size: 1.1rem; line-height: 1.8;">Both the paperboard and plastic resins we buy from
-                    outside sources are all <strong>U.S. FDA certified for direct food contact</strong> (21CFR177.2600 &amp;
-                    21CFR176.170). We ensure every material used in our process meets or exceeds federal safety
-                    requirements for your peace of mind.</p>
-            </div>
-
-            <!-- Factory Gallery -->
-            <div class="factory-gallery">
-                <div class="factory-img reveal">
-                    <img src="https://eateryessentials.com/wp-content/uploads/2020/04/ee-factory-2.jpg" alt="Factory Production Line">
-                </div>
-                <div class="factory-img reveal reveal-delay-1">
-                    <img src="https://eateryessentials.com/wp-content/uploads/2020/04/ee-factory-3.jpg" alt="Automated Manufacturing">
-                </div>
+            <div class="cert-details">
+                <h3>BRCGS Packaging Materials (Issue 7)</h3>
+                <ul>
+                    <li><strong>Facility:</strong> <span>EE Dallas QB, Inc.</span></li>
+                    <li><strong>Audit Date:</strong> <span>01 and 02 July 2025</span></li>
+                    <li><strong>Issue Date:</strong> <span>29 July 2025</span></li>
+                    <li><strong>Expiry Date:</strong> <span>19 September 2026</span></li>
+                    <li><strong>Grade:</strong> <span>B+</span></li>
+                </ul>
+                <a href="https://eateryessentials.com/wp-content/uploads/2025/08/REC27-P_Certificate_BRC-PK-173_2025_Final-scaled.jpg"
+                    class="btn btn-primary btn-sm" target="_blank">View Certificate</a>
             </div>
         </div>
-    </div>
 
-    <!-- CTA Section -->
-    <section class="section" style="background: var(--primary); color: var(--white); text-align: center; padding: 6rem 0;">
+        <!-- SQF -->
+        <div class="cert-info-card reveal">
+            <div class="cert-badge-wrap">
+                <img src="https://eateryessentials.com/wp-content/uploads/2025/11/ASI-Certificate-EE-Dallas-QB-10.09.2025.jpg"
+                    alt="SQF Certificate">
+            </div>
+            <div class="cert-details">
+                <h3>SQF Edition 9.0</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Food Safety Code for
+                    Manufacture of Food Packaging</p>
+                <ul>
+                    <li><strong>Facility:</strong> <span>EE Dallas QB</span></li>
+                    <li><strong>Certificate Number:</strong> <span>134034</span></li>
+                    <li><strong>Audit Date:</strong> <span>09/12/2025</span></li>
+                    <li><strong>Expiry Date:</strong> <span>11/26/2026</span></li>
+                    <li><strong>Category:</strong> <span>Manufacture of Food Packaging</span></li>
+                </ul>
+                <a href="https://eateryessentials.com/wp-content/uploads/2025/11/ASI-Certificate-EE-Dallas-QB-10.09.2025.jpg"
+                    class="btn btn-primary btn-sm" target="_blank">View Certificate</a>
+            </div>
+        </div>
+
+        <!-- NJ Recycled content -->
+        <div class="cert-info-card reveal">
+            <div class="cert-badge-wrap">
+                <img src="https://eateryessentials.com/wp-content/uploads/2024/09/Page-from-NJ-RC-Certification.png"
+                    alt="NJ Recycled Registration">
+            </div>
+            <div class="cert-details">
+                <h3>NJ Recycled Content Registration</h3>
+                <ul>
+                    <li><strong>Facility ID:</strong> <span>1025665</span></li>
+                    <li><strong>Manufacturer Location:</strong> <span>2425 W Danieldale Rd, Dallas, TX 75237</span></li>
+                    <li><strong>Description:</strong> <span>Plastic Beverage & Rigid Plastic Containers</span></li>
+                </ul>
+                <a href="https://eateryessentials.com/wp-content/uploads/2024/09/Page-from-NJ-RC-Certification.png"
+                    class="btn btn-primary btn-sm" target="_blank">View Registration</a>
+            </div>
+        </div>
+
+        <div class="compliance-grid reveal">
+            <div class="compliance-box">
+                <h4>FDA Compliance</h4>
+                <p>Both the paperboard and plastic resins we buy from outside sources are all <strong>U.S. FDA
+                        certified</strong> for direct food contact (21CFR177.2600 & 21CFR176.170).</p>
+            </div>
+            <div class="compliance-box">
+                <h4>Additional Standards</h4>
+                <p>We strictly adhere to <strong>ISO-22000</strong>, <strong>FSSC-22000</strong>, and
+                    <strong>HACCP</strong> (Hazard Analysis and Critical Control Points) quality and safety fundamentals
+                    across all production lines.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Industry Partners -->
+    <section class="partners-section">
         <div class="container reveal">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Committed to Your Safety</h2>
-            <p style="max-width: 700px; margin: 0 auto 2.5rem; opacity: 0.9;">We continue to invest in our facilities
-                and certifications to remain the leader in sustainable, safe food packaging across North America.</p>
-            <a href="contact.html" class="btn btn-white">Contact Our Quality Team</a>
+            <h2
+                style="font-size: 1.8rem; color: var(--dark); font-weight: 800; text-align: center; margin-bottom: 3rem;">
+                Our Industry Partners</h2>
+            <div class="partners-grid"
+                style="display: flex; justify-content: center; align-items: center; gap: 4rem; flex-wrap: wrap;">
+                <a href="https://www.iddba.org/" target="_blank"><img src="assets/images/IDDBAlogo-removebg-preview.png"
+                        alt="IDDBA"
+                        style="max-height: 80px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;"></a>
+                <a href="https://www.freshproduce.com/" target="_blank"><img
+                        src="assets/images/International-Fresh-Produce-Association-logo-removebg-preview.png" alt="IFPA"
+                        style="max-height: 80px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;"></a>
+                <a href="https://cpma.ca/" target="_blank"><img
+                        src="assets/images/CPMA-282x137-c-center-removebg-preview.png" alt="CPMA"
+                        style="max-height: 80px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;"></a>
+            </div>
         </div>
     </section>
 
@@ -301,33 +373,26 @@
                     <p>Innovative disposable packaging solutions for food service, processors, supermarkets and
                         C-Stores.</p>
                     <p style="margin-top: 1rem;">2425 Danieldale Rd<br>Dallas, TX 75237</p>
-                    <p>info@eateryessentials.com</p>
-                    <div class="social-links">
-                        <a href="https://facebook.com/eateryessentials" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://linkedin.com/company/eateryessentials" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://twitter.com/eateryessentials" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Products</h4>
-                    <a href="koda-cup-line.html">Koda Cup Line</a>
-                    <a href="category/grab-go.html">Grab &amp; Go</a>
-                    <a href="category/grab-go.html#film-seal">Film Seal</a>
-                    <a href="but-n-loc-line.html">But-N-Loc Line</a>
+                    <a href="products.html">All Products</a>
+                    <a href="category/but-n-loc.html">But-N-Loc</a>
+                    <a href="sustainability.html">Sustainability</a>
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
                     <a href="about.html">About Us</a>
-                    <a href="sustainability.html">Sustainability</a>
-                    <a href="careers.html">Careers</a>
-                    <a href="news.html">News</a>
+                    <a href="certification.html">Certification</a>
+                    <a href="contact.html">Contact</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Resources</h4>
-                    <a href="catalog.html">Catalog</a>
-                    <a href="sales-sheets.html">Sales Sheets</a>
-                    <a href="instructional-videos.html">Videos</a>
-                    <a href="contact.html">Contact Us</a>
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="copyright">
@@ -337,9 +402,25 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/search.js"></script>
-<script src="js/spec-sheet.js"></script>
+    <script>
+        // Inline active state hover for partners
+        document.querySelectorAll('.partners-grid img').forEach(img => {
+            img.addEventListener('mouseenter', () => { img.style.filter = 'grayscale(0%)'; img.style.opacity = '1'; });
+            img.addEventListener('mouseleave', () => { img.style.filter = 'grayscale(100%)'; img.style.opacity = '0.7'; });
+        });
+    </script>
+    
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-icon"><i class="fas fa-cookie-bite"></i></div>
+            <p>We use cookies to enhance your experience, analyze site traffic, and serve tailored content. By continuing to browse, you agree to our use of cookies as described in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="cookie-actions">
+                <button id="reject-cookies" class="btn btn-outline cookie-btn-reject">Reject</button>
+                <button id="accept-cookies" class="btn cookie-btn-accept">Accept</button>
+            </div>
+        </div>
+    </div>
+</body>
 
-
-
-</body></html>
+</html>

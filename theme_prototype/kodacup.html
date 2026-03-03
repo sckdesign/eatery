@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koda Cup Line — Eatery Essentials | Premium PET & Paper Packaging</title>
+    <meta name="description"
+        content="Explore the Koda Cup line by Eatery Essentials - Premium PET clear cups, deli containers, hinged lids, and more. Sustainable, high-quality food packaging.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .brand-p-hero {
+            padding: 10rem 0 6rem;
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            background-image: linear-gradient(rgba(0, 32, 91, 0.85), rgba(0, 32, 91, 0.85)), url('assets/images/koda-cup-fruit-hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .brand-p-hero .brand-logo-large {
+            width: 300px;
+            margin-bottom: 2rem;
+            filter: brightness(0) invert(1);
+        }
+
+        .brand-p-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .product-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .product-feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+        }
+
+        .product-feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-feature-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .product-feature-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .brand-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            aspect-ratio: 1;
+            border: 1px solid var(--border);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s var(--ease-out);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-blue_green.png" alt="Eatery Essentials">
+                </a>
+            </div>
+                                                                                                                        <nav class="main-nav">
+                <ul class="menu">
+                    <li class="menu-item"><a href="news.html">NEWS</a></li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="products.html">PRODUCTS</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="products.html">All Products</a></li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="products.html">Shop By Type</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="category/kodacup-pet-clear-cups.html">Clear Cups</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-deli-containers.html">Round Deli Containers</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-hinged-lid-containers.html">Hinged Containers</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-clear-salad-bowls.html">Plastic Salad Bowls</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-cake-bakery-containers.html">Cake & Bakery</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="category/but-n-loc.html">Shop By Lid</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="category/but-n-loc.html">Tamper Evident</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-hinged-lid-containers.html">Hinged Lid</a></li>
+                                    <li class="menu-item"><a href="products.html#vented-lids">Vented Lid</a></li>
+                                    <li class="menu-item"><a href="products.html#dome-flat-lids">Dome & Flat Lids</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="products.html#size-medium">Shop By Size</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="products.html#size-small">Under 10 oz</a></li>
+                                    <li class="menu-item"><a href="products.html#size-medium">12 oz - 16 oz</a></li>
+                                    <li class="menu-item"><a href="products.html#size-large">20 oz - 32 oz</a></li>
+                                    <li class="menu-item"><a href="products.html#size-xl">40 oz +</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="but-n-loc-closing-machine.html">BUT-N-LOC Closing Machine</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="sustainability.html">SUSTAINABILITY</a></li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="catalog.html">RESOURCES</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="catalog.html">Catalog</a></li>
+                            <li class="menu-item"><a href="sales-documents.html">Sales Documents</a></li>
+                            <li class="menu-item"><a href="customer-reference-documents.html">Customer Reference Documents</a></li>
+                            <li class="menu-item"><a href="instructional-videos.html">Instructional Videos</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="about.html">ABOUT</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="about.html">Company Info</a></li>
+                            <li class="menu-item"><a href="certification.html">Certification</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="contact.html">CONTACT</a></li>
+                    <li class="menu-item"><a href="careers.html">CAREERS</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="https://crm.eateryessentials.com/sample" class="btn">Request Samples</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="brand-p-hero">
+        <div class="container">
+            <img src="assets/images/kodaCup.png" alt="Koda Cup Logo" class="brand-logo-large">
+            <h1>Premium Foodservice Essentials</h1>
+            <p>Elevating your brand with crystal-clear, sustainable packaging solutions.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+                <span class="section-subtitle">Excellence in Every Cup</span>
+                <h2 class="section-title">The Koda Cup Standard</h2>
+                <p class="section-desc">Koda Cup is Eatery Essentials' flagship line of premium disposable packaging.
+                    Designed for clarity, strength, and environmental responsibility, our products are the choice for
+                    leading cafes, restaurants, and food processors.</p>
+            </div>
+
+            <div class="product-feature-grid">
+                <div class="product-feature-card">
+                    <i class="fas fa-glass-martini-alt"></i>
+                    <h3>Unmatched Clarity</h3>
+                    <p>Our rPET material offers superior clarity, making your beverages and food items the star of the
+                        show. Perfect for vibrant smoothies, layered salads, and colorful parfaits.</p>
+                </div>
+                <div class="product-feature-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sustainable Design</h3>
+                    <p>Made with a minimum of 30% post-consumer recycled plastic, Koda Cup products reduce environmental
+                        impact without sacrificing performance or aesthetics.</p>
+                </div>
+                <div class="product-feature-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Reliable Strength</h3>
+                    <p>Engineered for durability and spill-resistance. Precise lid fits ensure security for takeaway and
+                        delivery, preventing messy accidents.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 6rem;">
+                <div class="text-center">
+                    <h2 class="section-title">Product Categories</h2>
+                </div>
+                <div class="brand-gallery">
+                    <div class="gallery-item">
+                        <img src="assets/images/PET-CLEAR-CUPS.jpg" alt="PET Clear Cups">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/DELI-CONTAINERS.jpg" alt="Deli Containers">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/HINGED-CONTAINERS.jpg" alt="Hinged Containers">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/SALAD-BOWLS.jpg" alt="Salad Bowls">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 4rem;">
+                <a href="products.html" class="btn btn-primary">View Full Catalog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <img src="assets/images/logo-white.png" alt="Eatery Essentials" class="footer-logo">
+                    <p>Innovative disposable packaging solutions for food service, processors, supermarkets and
+                        C-Stores.</p>
+                    <p style="margin-top: 1rem;">2425 Danieldale Rd<br>Dallas, TX 75237</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Brands</h4>
+                    <a href="kodacup.html">Koda Cup</a>
+                    <a href="but-n-loc.html">But-N-Loc</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="sustainability.html">Sustainability</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="catalog.html">Catalog</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Eatery Essentials, Inc. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-icon"><i class="fas fa-cookie-bite"></i></div>
+            <p>We use cookies to enhance your experience, analyze site traffic, and serve tailored content. By continuing to browse, you agree to our use of cookies as described in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="cookie-actions">
+                <button id="reject-cookies" class="btn btn-outline cookie-btn-reject">Reject</button>
+                <button id="accept-cookies" class="btn cookie-btn-accept">Accept</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

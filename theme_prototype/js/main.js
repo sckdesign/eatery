@@ -46,31 +46,23 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileToggle.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', toggleMenu);
 
-        // Submenu Drill-down Logic
+        // Submenu Drill-down Logic (Mobile Only)
         const menuItemsWithChildren = mainNav.querySelectorAll('.menu-item-has-children, .has-dropdown');
         menuItemsWithChildren.forEach(item => {
             const link = item.querySelector('a');
             const subMenu = item.querySelector('.sub-menu, .dropdown');
 
             if (link && subMenu) {
-                // Add Back Button (arrow only, no text)
-                if (!subMenu.querySelector('.menu-back-btn')) {
-                    const backBtn = document.createElement('li');
-                    backBtn.className = 'menu-back-btn';
-                    backBtn.innerHTML = '&#8592;';
-                    backBtn.setAttribute('aria-label', 'Go back');
-                    subMenu.insertBefore(backBtn, subMenu.firstChild);
-
-                    backBtn.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        item.classList.remove('submenu-active');
-                    });
-                }
-
                 link.addEventListener('click', (e) => {
                     if (window.innerWidth <= 1024) {
                         e.preventDefault();
-                        item.classList.add('submenu-active');
+                        // Toggle logic for mobile accordion
+                        const isActive = item.classList.contains('submenu-active');
+                        // Close other open submenus at the same level
+                        item.parentElement.querySelectorAll('.submenu-active').forEach(el => {
+                            if (el !== item) el.classList.remove('submenu-active');
+                        });
+                        item.classList.toggle('submenu-active', !isActive);
                     }
                 });
             }
@@ -119,55 +111,16 @@ document.addEventListener('DOMContentLoaded', () => {
     createBlobs();
 
     // =========================================
-    // HERO INTERACTIVE PARALLAX (REFINED)
+    // HERO INTERACTIVE PARALLAX (DISABLED FOR STABILITY)
     // =========================================
     const heroSect = document.querySelector('.hero');
     const heroBgElement = document.querySelector('.hero-bg');
     const heroContentInner = document.querySelector('.hero-content');
 
-    if (heroSect && heroBgElement && heroContentInner) {
-        // Scroll Parallax
-        window.addEventListener('scroll', () => {
-            const scrolled = window.scrollY;
-            if (scrolled < window.innerHeight) {
-                const yOffset = scrolled * 0.2;
-                heroBgElement.style.transform = `translate(-50%, calc(-50% + ${yOffset}px)) scale(1.1)`;
-                heroContentInner.style.transform = `translateY(${scrolled * 0.12}px)`;
-                heroContentInner.style.opacity = 1 - (scrolled / (window.innerHeight * 0.95));
-            }
-        }, { passive: true });
-
-        // Mouse Move depth effect (Desktop only)
-        if (window.innerWidth > 1024) {
-            heroSect.addEventListener('mousemove', (e) => {
-                const { clientX, clientY } = e;
-                const centerX = window.innerWidth / 2;
-                const centerY = window.innerHeight / 2;
-
-                const moveX = (clientX - centerX) / 60;
-                const moveY = (clientY - centerY) / 60;
-
-                const bgWrapper = heroSect.querySelector('.hero-bg-wrapper');
-                if (bgWrapper) {
-                    bgWrapper.style.transform = `translate(${moveX}px, ${moveY}px)`;
-                }
-
-                heroContentInner.style.transform = `translate(${moveX * -0.5}px, ${moveY * -0.5}px)`;
-            });
-
-            heroSect.addEventListener('mouseleave', () => {
-                const bgWrapper = heroSect.querySelector('.hero-bg-wrapper');
-                if (bgWrapper) {
-                    bgWrapper.style.transform = `translate(0, 0)`;
-                }
-                heroContentInner.style.transform = `translate(0, 0)`;
-            });
-        }
-    }
-
     // =========================================
-    // MAGNETIC BUTTON EFFECT
+    // MAGNETIC BUTTON EFFECT (DISABLED FOR STABILITY)
     // =========================================
+    /*
     const magneticBtns = document.querySelectorAll('.btn-primary, .btn-white, .btn-submit');
     if (window.innerWidth > 1024) {
         magneticBtns.forEach(btn => {
@@ -186,4 +139,37 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    */
+
+    // =========================================
+    // COOKIE BANNER
+    // =========================================
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptCookiesBtn = document.getElementById('accept-cookies');
+    const rejectCookiesBtn = document.getElementById('reject-cookies');
+
+    if (cookieBanner) {
+        // Check if user has already made a preference choice
+        if (!localStorage.getItem('eatery_cookies_preference')) {
+            // Slight delay before showing for better UX
+            setTimeout(() => {
+                cookieBanner.classList.add('show');
+            }, 1000);
+        }
+
+        if (acceptCookiesBtn) {
+            acceptCookiesBtn.addEventListener('click', () => {
+                localStorage.setItem('eatery_cookies_preference', 'accepted');
+                cookieBanner.classList.remove('show');
+            });
+        }
+
+        if (rejectCookiesBtn) {
+            rejectCookiesBtn.addEventListener('click', () => {
+                localStorage.setItem('eatery_cookies_preference', 'rejected');
+                cookieBanner.classList.remove('show');
+            });
+        }
+    }
+
 });

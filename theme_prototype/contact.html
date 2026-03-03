@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -109,6 +109,64 @@
             border: 0;
             border-top: 1px solid var(--border);
             margin: 1.75rem 0;
+        }
+
+        /* Map UI */
+        .contact-map-wrapper {
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .map-link {
+            display: block;
+            position: relative;
+            background: #e9ecef;
+        }
+
+        .map-link img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .map-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 48, 135, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .map-overlay span {
+            background: var(--white);
+            color: var(--primary);
+            padding: 0.6rem 1.25rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            box-shadow: var(--shadow-md);
+            transform: translateY(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .map-link:hover img {
+            transform: scale(1.05);
+        }
+
+        .map-link:hover .map-overlay {
+            opacity: 1;
+        }
+
+        .map-link:hover .map-overlay span {
+            transform: translateY(0);
         }
 
         .dept-label {
@@ -252,26 +310,63 @@
                 <span style="display:none; font-weight:800; font-size:1.1rem; color:var(--primary)">Eatery
                     Essentials</span>
             </a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li class="menu-item-has-children">
+                                                <nav class="main-nav">
+                <ul class="menu">
+                    <li class="menu-item"><a href="news.html">NEWS</a></li>
+                    <li class="menu-item menu-item-has-children">
                         <a href="products.html">PRODUCTS</a>
                         <ul class="sub-menu">
-                            <li><a href="products.html">All Products</a></li>
-                            <li><a href="catalog.html">Digital Catalog</a></li>
+                            <li class="menu-item"><a href="products.html">All Products</a></li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="products.html">Shop By Type</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="category/kodacup-pet-clear-cups.html">Clear Cups</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-deli-containers.html">Round Deli Containers</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-hinged-lid-containers.html">Hinged Containers</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-clear-salad-bowls.html">Plastic Salad Bowls</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-cake-bakery-containers.html">Cake & Bakery</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="category/but-n-loc.html">Shop By Lid</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="category/but-n-loc.html">Tamper Evident</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-hinged-lid-containers.html">Hinged Lid</a></li>
+                                    <li class="menu-item"><a href="products.html#vented-lids">Vented Lid</a></li>
+                                    <li class="menu-item"><a href="products.html#dome-flat-lids">Dome & Flat Lids</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="products.html#size-medium">Shop By Size</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="products.html#size-small">Under 10 oz</a></li>
+                                    <li class="menu-item"><a href="products.html#size-medium">12 oz - 16 oz</a></li>
+                                    <li class="menu-item"><a href="products.html#size-large">20 oz - 32 oz</a></li>
+                                    <li class="menu-item"><a href="products.html#size-xl">40 oz +</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="but-n-loc-closing-machine.html">BUT-N-LOC Closing Machine</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children">
+                    <li class="menu-item"><a href="sustainability.html">SUSTAINABILITY</a></li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="catalog.html">RESOURCES</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="catalog.html">Catalog</a></li>
+                            <li class="menu-item"><a href="sales-documents.html">Sales Documents</a></li>
+                            <li class="menu-item"><a href="customer-reference-documents.html">Customer Reference Documents</a></li>
+                            <li class="menu-item"><a href="instructional-videos.html">Instructional Videos</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
                         <a href="about.html">ABOUT</a>
                         <ul class="sub-menu">
-                            <li><a href="about.html">Company Info</a></li>
-                            <li><a href="certification.html">Certifications</a></li>
+                            <li class="menu-item"><a href="about.html">Company Info</a></li>
+                            <li class="menu-item"><a href="certification.html">Certification</a></li>
                         </ul>
                     </li>
-                    <li><a href="sustainability.html">SUSTAINABILITY</a></li>
-                    <li><a href="careers.html">CAREERS</a></li>
-                    <li><a href="contact.html" class="active">CONTACT</a></li>
+                    <li class="menu-item"><a href="contact.html">CONTACT</a></li>
+                    <li class="menu-item"><a href="careers.html">CAREERS</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
@@ -299,6 +394,20 @@
                 <!-- Left: Company Info Sidebar -->
                 <aside class="reveal-left">
                     <div class="contact-sidebar-card">
+
+                        <!-- Map Graphic -->
+                        <div class="contact-map-wrapper">
+                            <a href="https://maps.app.goo.gl/Wm7RBf38EH22agE3A" target="_blank"
+                                rel="noopener noreferrer" class="map-link" aria-label="Open in Google Maps">
+                                <img src="assets/images/map-preview.png"
+                                    alt="Map Location of Eatery Essentials in Dallas, TX" />
+                                <div class="map-overlay">
+                                    <span><i class="fas fa-external-link-alt" style="margin-right: 6px;"></i> Open
+                                        Google Maps</span>
+                                </div>
+                            </a>
+                        </div>
+
                         <h3>Dallas, Texas</h3>
                         <address>
                             2425 Danieldale Rd<br>
@@ -408,6 +517,18 @@
     </footer>
 
     <script src="js/main.js"></script>
+    
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-icon"><i class="fas fa-cookie-bite"></i></div>
+            <p>We use cookies to enhance your experience, analyze site traffic, and serve tailored content. By continuing to browse, you agree to our use of cookies as described in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="cookie-actions">
+                <button id="reject-cookies" class="btn btn-outline cookie-btn-reject">Reject</button>
+                <button id="accept-cookies" class="btn cookie-btn-accept">Accept</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
