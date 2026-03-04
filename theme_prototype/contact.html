@@ -25,8 +25,7 @@
         .page-hero__bg {
             position: absolute;
             inset: 0;
-            background: url('assets/images/ee-factory-2.jpg') center / cover no-repeat;
-            filter: brightness(0.45);
+            background: linear-gradient(135deg, rgba(0, 80, 160, 0.7) 0%, rgba(0, 150, 100, 0.6) 100%), url('assets/images/contact-hero.jpg') center / cover no-repeat;
         }
 
         .page-hero__content {
@@ -303,14 +302,13 @@
 
 <body>
     <header class="site-header">
-        <div class="header-inner container">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo-blue_green.png" alt="Eatery Essentials"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
-                <span style="display:none; font-weight:800; font-size:1.1rem; color:var(--primary)">Eatery
-                    Essentials</span>
-            </a>
-                                                <nav class="main-nav">
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-blue_green.png" alt="Eatery Essentials">
+                </a>
+            </div>
+            <nav class="main-nav">
                 <ul class="menu">
                     <li class="menu-item"><a href="news.html">NEWS</a></li>
                     <li class="menu-item menu-item-has-children">
@@ -320,20 +318,27 @@
                             <li class="menu-item menu-item-has-children">
                                 <a href="products.html">Shop By Type</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="category/kodacup-pet-clear-cups.html">Clear Cups</a></li>
-                                    <li class="menu-item"><a href="category/kodacup-deli-containers.html">Round Deli Containers</a></li>
-                                    <li class="menu-item"><a href="category/kodacup-hinged-lid-containers.html">Hinged Containers</a></li>
-                                    <li class="menu-item"><a href="category/kodacup-clear-salad-bowls.html">Plastic Salad Bowls</a></li>
-                                    <li class="menu-item"><a href="category/kodacup-cake-bakery-containers.html">Cake & Bakery</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-pet-clear-cups.html">Clear Cups</a>
+                                    </li>
+                                    <li class="menu-item"><a href="category/kodacup-deli-containers.html">Round Deli
+                                            Containers</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-hinged-lid-containers.html">Hinged
+                                            Containers</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-clear-salad-bowls.html">Plastic
+                                            Salad Bowls</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-cake-bakery-containers.html">Cake &
+                                            Bakery</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children">
                                 <a href="category/but-n-loc.html">Shop By Lid</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="category/but-n-loc.html">Tamper Evident</a></li>
-                                    <li class="menu-item"><a href="category/kodacup-hinged-lid-containers.html">Hinged Lid</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-hinged-lid-containers.html">Hinged
+                                            Lid</a></li>
                                     <li class="menu-item"><a href="products.html#vented-lids">Vented Lid</a></li>
-                                    <li class="menu-item"><a href="products.html#dome-flat-lids">Dome & Flat Lids</a></li>
+                                    <li class="menu-item"><a href="products.html#dome-flat-lids">Dome & Flat Lids</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children">
@@ -345,7 +350,8 @@
                                     <li class="menu-item"><a href="products.html#size-xl">40 oz +</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item"><a href="but-n-loc-closing-machine.html">BUT-N-LOC Closing Machine</a></li>
+                            <li class="menu-item"><a href="but-n-loc-closing-machine.html">BUT-N-LOC Closing Machine</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="menu-item"><a href="sustainability.html">SUSTAINABILITY</a></li>
@@ -354,7 +360,8 @@
                         <ul class="sub-menu">
                             <li class="menu-item"><a href="catalog.html">Catalog</a></li>
                             <li class="menu-item"><a href="sales-documents.html">Sales Documents</a></li>
-                            <li class="menu-item"><a href="customer-reference-documents.html">Customer Reference Documents</a></li>
+                            <li class="menu-item"><a href="customer-reference-documents.html">Customer Reference
+                                    Documents</a></li>
                             <li class="menu-item"><a href="instructional-videos.html">Instructional Videos</a></li>
                         </ul>
                     </li>
@@ -370,9 +377,18 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="mobile-menu-toggle"
-                    aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+                <a href="https://crm.eateryessentials.com/sample" class="btn">Request Samples</a>
+                <button class="search-icon-btn" aria-label="Open Search"><svg width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2.5">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg></button>
             </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
@@ -448,6 +464,20 @@
                             <a href="tel:+14694829069" style="color:var(--text-secondary); font-size:0.85rem;">(469)
                                 482-9069</a>
                         </div>
+
+                        <div class="social-links" style="margin-top: 2.5rem;">
+                            <p class="dept-label" style="margin-bottom: 0.75rem;">Follow Us</p>
+                            <a href="https://facebook.com/eateryessentials" target="_blank" aria-label="Facebook"
+                                style="margin-right: 15px; font-size: 1.25rem; color: #1877f2; text-decoration: none;"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://linkedin.com/company/eateryessentials" target="_blank"
+                                aria-label="LinkedIn"
+                                style="margin-right: 15px; font-size: 1.25rem; color: #0a66c2; text-decoration: none;"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com/eateryessentials" target="_blank" aria-label="Twitter"
+                                style="font-size: 1.25rem; color: #1da1f2; text-decoration: none;"><i
+                                    class="fab fa-twitter"></i></a>
+                        </div>
                     </div>
                 </aside>
 
@@ -517,12 +547,14 @@
     </footer>
 
     <script src="js/main.js"></script>
-    
+
     <!-- Cookie Banner -->
     <div id="cookie-banner" class="cookie-banner">
         <div class="cookie-content">
             <div class="cookie-icon"><i class="fas fa-cookie-bite"></i></div>
-            <p>We use cookies to enhance your experience, analyze site traffic, and serve tailored content. By continuing to browse, you agree to our use of cookies as described in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            <p>We use cookies to enhance your experience, analyze site traffic, and serve tailored content. By
+                continuing to browse, you agree to our use of cookies as described in our <a
+                    href="privacy-policy.html">Privacy Policy</a>.</p>
             <div class="cookie-actions">
                 <button id="reject-cookies" class="btn btn-outline cookie-btn-reject">Reject</button>
                 <button id="accept-cookies" class="btn cookie-btn-accept">Accept</button>

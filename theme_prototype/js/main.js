@@ -172,4 +172,67 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // =========================================
+    // IMAGE ZOOM PANNING (Product Pages)
+    // =========================================
+    const productGallery = document.querySelector('.product-gallery');
+    const mainImage = document.querySelector('.main-image');
+
+    if (productGallery && mainImage) {
+        productGallery.addEventListener('mousemove', (e) => {
+            const rect = productGallery.getBoundingClientRect();
+            // Calculate mouse position relative to the container as a percentage
+            const x = (e.clientX - rect.left) / rect.width * 100;
+            const y = (e.clientY - rect.top) / rect.height * 100;
+
+            // Pan the image by moving its transform origin
+            mainImage.style.transformOrigin = `${x}% ${y}%`;
+        });
+
+        productGallery.addEventListener('mouseleave', () => {
+            // Reset to center when mouse leaves
+            mainImage.style.transformOrigin = `center center`;
+        });
+    }
+
+    // =========================================
+    // IMAGE LIGHTBOX MODAL (Product Pages)
+    // =========================================
+    if (mainImage) {
+        // Create modal container
+        const modal = document.createElement('div');
+        modal.className = 'image-lightbox-modal';
+
+        const modalImg = document.createElement('img');
+        modal.appendChild(modalImg);
+
+        // Add close button
+        const closeBtn = document.createElement('div');
+        closeBtn.className = 'lightbox-close';
+        closeBtn.innerHTML = '&times;';
+        modal.appendChild(closeBtn);
+
+        document.body.appendChild(modal);
+
+        // Open modal on image click
+        mainImage.addEventListener('click', () => {
+            modalImg.src = mainImage.src;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+
+        // Close modal
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
+
 });
