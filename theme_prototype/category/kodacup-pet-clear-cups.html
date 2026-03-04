@@ -1,18 +1,65 @@
-<!DOCTYPE html><html lang="en"><head>
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KODACUP — PET Clear Cups — Eatery Essentials</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .category-section {
+            margin-bottom: 4rem;
+        }
+
+        .category-section:first-of-type {
+            margin-top: 0;
+        }
+
+        .content-wrapper {
+            padding-top: 0;
+        }
+
+        main.container {
+            padding-top: 0;
+        }
+
+        .category-section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary);
+            display: inline-block;
+        }
+
+        .category-intro {
+            background: #f8fbff;
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #e1e8f0;
+        }
+
+        .category-intro p {
+            max-width: 800px;
+            margin: 1.5rem auto 0;
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-        <header class="site-header">
+    <header class="site-header">
         <div class="header-inner">
             <div class="logo">
                 <a href="../index.html">
                     <img src="../assets/images/logo-blue_green.png" alt="Eatery Essentials">
                 </a>
             </div>
-                                                                                                            <nav class="main-nav">
+            <nav class="main-nav">
                 <ul class="menu">
                     <li class="menu-item"><a href="../news.html">NEWS</a></li>
                     <li class="menu-item menu-item-has-children">
@@ -22,32 +69,23 @@
                             <li class="menu-item menu-item-has-children">
                                 <a href="../products.html">Shop By Type</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="../category/kodacup-pet-clear-cups.html">Clear Cups</a></li>
-                                    <li class="menu-item"><a href="../category/kodacup-deli-containers.html">Round Deli Containers</a></li>
-                                    <li class="menu-item"><a href="../category/kodacup-hinged-lid-containers.html">Hinged Containers</a></li>
-                                    <li class="menu-item"><a href="../category/kodacup-clear-salad-bowls.html">Plastic Salad Bowls</a></li>
-                                    <li class="menu-item"><a href="../category/kodacup-cake-bakery-containers.html">Cake & Bakery</a></li>
+                                    <li class="menu-item"><a href="../category/kodacup-pet-clear-cups.html">Clear
+                                            Cups</a></li>
+                                    <li class="menu-item"><a href="../category/kodacup-deli-containers.html">Round Deli
+                                            Containers</a></li>
+                                    <li class="menu-item"><a
+                                            href="../category/kodacup-hinged-lid-containers.html">Hinged Containers</a>
+                                    </li>
+                                    <li class="menu-item"><a href="../category/kodacup-film-seal-containers.html">Film
+                                            Seal Containers</a></li>
+                                    <li class="menu-item"><a href="../category/kodacup-clear-salad-bowls.html">Plastic
+                                            Salad Bowls</a></li>
+                                    <li class="menu-item"><a href="../category/kodacup-cake-bakery-containers.html">Cake
+                                            & Bakery</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="../category/but-n-loc.html">Shop By Lid</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="../category/but-n-loc.html">Tamper Evident</a></li>
-                                    <li class="menu-item"><a href="../category/kodacup-hinged-lid-containers.html">Hinged Lid</a></li>
-                                    <li class="menu-item"><a href="../products.html#vented-lids">Vented Lid</a></li>
-                                    <li class="menu-item"><a href="../products.html#dome-flat-lids">Dome & Flat Lids</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="../products.html#size-medium">Shop By Size</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="../products.html#size-small">Under 10 oz</a></li>
-                                    <li class="menu-item"><a href="../products.html#size-medium">12 oz - 16 oz</a></li>
-                                    <li class="menu-item"><a href="../products.html#size-large">20 oz - 32 oz</a></li>
-                                    <li class="menu-item"><a href="../products.html#size-xl">40 oz +</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item"><a href="../but-n-loc-closing-machine.html">BUT-N-LOC Closing Machine</a></li>
+                            <li class="menu-item"><a href="../but-n-loc-closing-machine.html">BUT-N-LOC Closing
+                                    Machine</a></li>
                         </ul>
                     </li>
                     <li class="menu-item"><a href="../sustainability.html">SUSTAINABILITY</a></li>
@@ -56,7 +94,8 @@
                         <ul class="sub-menu">
                             <li class="menu-item"><a href="../catalog.html">Catalog</a></li>
                             <li class="menu-item"><a href="../sales-documents.html">Sales Documents</a></li>
-                            <li class="menu-item"><a href="../customer-reference-documents.html">Customer Reference Documents</a></li>
+                            <li class="menu-item"><a href="../customer-reference-documents.html">Customer Reference
+                                    Documents</a></li>
                             <li class="menu-item"><a href="../instructional-videos.html">Instructional Videos</a></li>
                         </ul>
                     </li>
@@ -73,15 +112,13 @@
             </nav>
             <div class="header-actions">
                 <a href="https://crm.eateryessentials.com/sample" class="btn">Request Samples</a>
-                <button class="search-icon-btn" aria-label="Open Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </header>
+
     <div class="breadcrumbs">
         <div class="container">
             <h1>KODACUP — PET Clear Cups</h1>
@@ -94,172 +131,533 @@
             </ul>
         </div>
     </div>
+
+    <section class="section"
+        style="padding: 6rem 0 0; background: linear-gradient(to bottom, #f0f7ff 0%, #ffffff 100%);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center;">
+                <div class="hero-text-content">
+                    <span class="section-subtitle" style="display: block; margin-bottom: 1rem;">Premium Beverage & Food
+                        Solutions</span>
+                    <h2 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; color: var(--dark);">KODACUP™
+                        <br><span style="color: var(--primary);">Ultra-Clear PET</span>
+                    </h2>
+                    <p style="font-size: 1.2rem; color: #555; line-height: 1.7; margin-bottom: 2rem;">The industry
+                        standard for premium food presentation. From vibrant fruit salads and traditional yogurt
+                        parfaits to high-volume beverage service, our PET line ensures your product remains the hero.
+                    </p>
+                    <div style="display: flex; gap: 1.5rem;">
+                        <div
+                            style="display: flex; align-items: center; gap: 0.75rem; color: var(--primary); font-weight: 600;">
+                            <i class="fas fa-recycle" style="font-size: 1.5rem;"></i> 100% Recyclable
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; gap: 0.75rem; color: var(--primary); font-weight: 600;">
+                            <i class="fas fa-snowflake" style="font-size: 1.5rem;"></i> Cold-Chain Performance
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image-wrap" style="position: relative;">
+                    <img src="../assets/images/kodacup-application-hero.jpg" alt="Koda Cup Applications"
+                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: 0 40px 80px rgba(0,72,180,0.15), 0 10px 30px rgba(0,0,0,0.08); position: relative; z-index: 2;">
+                    <div
+                        style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: var(--secondary); opacity: 0.2; border-radius: 50%; z-index: 1;">
+                    </div>
+                    <div
+                        style="position: absolute; bottom: -30px; left: -30px; width: 160px; height: 160px; background: var(--primary); opacity: 0.1; border-radius: 50%; z-index: 1;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="brand-feature-grid" style="margin-top: 8rem; margin-bottom: 0;">
+                <div class="feature-reveal-card" style="padding: 2.5rem;">
+                    <i class="fas fa-gem"></i>
+                    <h3>Crystal Clarity</h3>
+                    <p>Proprietary resin blend provides glass-like transparency, enhancing the visual appeal of colorful
+                        contents like fruit and parfaits.</p>
+                </div>
+                <div class="feature-reveal-card" style="padding: 2.5rem;">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>High Impact Strength</h3>
+                    <p>Engineered for maximum crack-resistance. Our cups maintain structural integrity even in
+                        fast-paced retail environments.</p>
+                </div>
+                <div class="feature-reveal-card" style="padding: 2.5rem;">
+                    <i class="fas fa-object-group"></i>
+                    <h3>Modular Compatibility</h3>
+                    <p>Universal lid diameters across multiple sizes simplify inventory management and ensure a perfect,
+                        leak-resistant seal every time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="content-wrapper">
-        <main>
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2024/06/PTINS-D92-DEEP.jpg" alt="4 OZ PET CLEAR DEEP INSERT FOR 92MM CUPS" onerror="this.src='../assets/images/logo-blue_green.png'">
+        <main class="container">
+
+            <!-- CUPS SECTION -->
+            <div class="category-section" id="cups">
+                <h2 class="category-section-title">PET Clear Cups</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/7oz-PET-Cup-500x500.jpg"
+                                alt="7 OZ PET CLEAR CUP">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">7 OZ PET CLEAR CUP</h3>
+                            <a href="../products/7-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
+                        </div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-title">4 OZ PET CLEAR DEEP INSERT FOR 92MM CUPS</h3>
-                        <a href="../products/4-oz-pet-clear-deep-insert-for-92mm-cups.html" class="link-arrow">View Details</a>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/8oz-PET-Cups-500x500.jpg"
+                                alt="8 OZ PET CLEAR CUP">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">8 OZ PET CLEAR CUP</h3>
+                            <a href="../products/8-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
+                        </div>
                     </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2020/06/7oz-PET-Cup-500x500.jpg" alt="7 OZ PET CLEAR CUP" onerror="this.src='../assets/images/logo-blue_green.png'">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/9oz-Squat-PET-Cups-smooth-wall-500x500.jpg"
+                                alt="9 OZ SQUAT PET CLEAR CUP (SMOOTH WALL)">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">9 OZ SQUAT PET CLEAR CUP (SMOOTH WALL)</h3>
+                            <a href="../products/9-oz-sw-pet-clear-cup.html" class="link-arrow">View Details</a>
+                        </div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-title">7 OZ PET CLEAR CUP</h3>
-                        <a href="../products/7-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/10oz-PET-Cups-500x500.jpg"
+                                alt="10 OZ PET CLEAR CUP">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">10 OZ PET CLEAR CUP</h3>
+                            <a href="../products/10-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
+                        </div>
                     </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2020/06/8oz-PET-Cups-500x500.jpg" alt="8 OZ PET CLEAR CUP" onerror="this.src='../assets/images/logo-blue_green.png'">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/12oz-PET-Cups-500x500.jpg"
+                                alt="12 OZ TALL PET CLEAR CUP">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">12 OZ TALL PET CLEAR CUP</h3>
+                            <a href="../products/12-oz-tall-pet-clear-cup.html" class="link-arrow">View Details</a>
+                        </div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-title">8 OZ PET CLEAR CUP</h3>
-                        <a href="../products/8-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/12-14oz-PET-Cups-500x500.jpg"
+                                alt="12/14 OZ PET CLEAR CUP">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">12/14 OZ PET CLEAR CUP</h3>
+                            <a href="../products/1214-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
+                        </div>
                     </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2020/06/10oz-PET-Cups-500x500.jpg" alt="10 OZ PET CLEAR CUP" onerror="this.src='../assets/images/logo-blue_green.png'">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/16oz-Tall-PET-Cups-500x500.jpg"
+                                alt="16 OZ TALL PET CLEAR CUP">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">16 OZ TALL PET CLEAR CUP</h3>
+                            <a href="../products/16-oz-tall-pet-clear-cup.html" class="link-arrow">View Details</a>
+                        </div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-title">10 OZ PET CLEAR CUP</h3>
-                        <a href="../products/10-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/16-18oz-PET-Cups-500x500.jpg"
+                                alt="16 OZ PET CLEAR CUP">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">16 OZ PET CLEAR CUP</h3>
+                            <a href="../products/16-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
+                        </div>
                     </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2020/06/9oz-Squat-PET-Cups-smooth-wall-500x500.jpg" alt="9 OZ SQUAT PET CLEAR CUP (SMOOTH WALL)" onerror="this.src='../assets/images/logo-blue_green.png'">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/20oz-PET-Cups-500x500.jpg"
+                                alt="20 OZ PET CLEAR CUP">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">20 OZ PET CLEAR CUP</h3>
+                            <a href="../products/20-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
+                        </div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-title">9 OZ SQUAT PET CLEAR CUP (SMOOTH WALL)</h3>
-                        <a href="../products/9-oz-sw-pet-clear-cup.html" class="link-arrow">View Details</a>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/24oz-PET-Cups-500x500.jpg"
+                                alt="24 OZ PET CLEAR CUP">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">24 OZ PET CLEAR CUP</h3>
+                            <a href="../products/24-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
+                        </div>
                     </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2020/06/12oz-PET-Cups-500x500.jpg" alt="12 OZ TALL PET CLEAR CUP" onerror="this.src='../assets/images/logo-blue_green.png'">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">12 OZ TALL PET CLEAR CUP</h3>
-                        <a href="../products/12-oz-tall-pet-clear-cup.html" class="link-arrow">View Details</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2020/06/12-14oz-PET-Cups-500x500.jpg" alt="12/14 OZ PET CLEAR CUP" onerror="this.src='../assets/images/logo-blue_green.png'">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">12/14 OZ PET CLEAR CUP</h3>
-                        <a href="../products/1214-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2020/06/16oz-Tall-PET-Cups-500x500.jpg" alt="16 OZ TALL PET CLEAR CUP" onerror="this.src='../assets/images/logo-blue_green.png'">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">16 OZ TALL PET CLEAR CUP</h3>
-                        <a href="../products/16-oz-tall-pet-clear-cup.html" class="link-arrow">View Details</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2020/06/16-18oz-PET-Cups-500x500.jpg" alt="16 OZ PET CLEAR CUP" onerror="this.src='../assets/images/logo-blue_green.png'">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">16 OZ PET CLEAR CUP</h3>
-                        <a href="../products/16-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2020/06/20oz-PET-Cups-500x500.jpg" alt="20 OZ PET CLEAR CUP" onerror="this.src='../assets/images/logo-blue_green.png'">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">20 OZ PET CLEAR CUP</h3>
-                        <a href="../products/20-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2020/06/24oz-PET-Cups-500x500.jpg" alt="24 OZ PET CLEAR CUP" onerror="this.src='../assets/images/logo-blue_green.png'">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">24 OZ PET CLEAR CUP</h3>
-                        <a href="../products/24-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2020/06/32oz-PET-Cups-500x500.jpg" alt="32 OZ PET CLEAR CUP" onerror="this.src='../assets/images/logo-blue_green.png'">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">32 OZ PET CLEAR CUP</h3>
-                        <a href="../products/32-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2023/09/PTINS-D92-DEEP.jpg" alt="4OZ PET CLEAR DEEP INSERT FOR 92MM CUPS" onerror="this.src='../assets/images/logo-blue_green.png'">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">4OZ PET CLEAR DEEP INSERT FOR 92MM CUPS</h3>
-                        <a href="../products/4oz-pet-clear-deep-insert-for-92mm-cups.html" class="link-arrow">View Details</a>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/32oz-PET-Cups-500x500.jpg"
+                                alt="32 OZ PET CLEAR CUP">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">32 OZ PET CLEAR CUP</h3>
+                            <a href="../products/32-oz-pet-clear-cup.html" class="link-arrow">View Details</a>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2020/06/Insert-4oz-e1591952640472-500x500.jpg" alt="4 OZ PET CLEAR INSERT FOR 92mm CUPS" onerror="this.src='../assets/images/logo-blue_green.png'">
+            </div>
+
+            <!-- INSERTS SECTION -->
+            <div class="category-section" id="inserts">
+                <h2 class="category-section-title">Cup Inserts</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/Insert-4oz-e1591952640472-500x500.jpg"
+                                alt="4 OZ PET CLEAR INSERT FOR 92mm CUPS">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">4 OZ PET CLEAR INSERT FOR 92mm CUPS</h3>
+                            <a href="../products/4-oz-pet-clear-insert-92mm.html" class="link-arrow">View Details</a>
+                        </div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-title">4 OZ PET CLEAR INSERT FOR 92mm CUPS</h3>
-                        <a href="../products/4-oz-pet-clear-insert-92mm.html" class="link-arrow">View Details</a>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2024/06/PTINS-D92-DEEP.jpg"
+                                alt="4 OZ PET CLEAR DEEP INSERT FOR 92MM CUPS">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">4 OZ PET CLEAR DEEP INSERT FOR 92MM CUPS</h3>
+                            <a href="../products/4-oz-pet-clear-deep-insert-for-92mm-cups.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/Insert-5oz-1-500x500.jpg"
+                                alt="5 OZ PET CLEAR INSERT FOR 98mm CUPS">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">5 OZ PET CLEAR INSERT FOR 98mm CUPS</h3>
+                            <a href="../products/5-oz-pet-clear-insert-98mm-cups.html" class="link-arrow">View
+                                Details</a>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2020/06/Insert-5oz-1-500x500.jpg" alt="5 OZ PET CLEAR INSERT FOR 98mm CUPS" onerror="this.src='../assets/images/logo-blue_green.png'">
+            </div>
+
+            <!-- LIDS SECTION -->
+            <div class="category-section" id="lids">
+                <h2 class="category-section-title">Matching Lids</h2>
+
+                <h3 style="margin-bottom: 1.5rem; color: #666; font-size: 1.2rem;">Fits 7, 8, & 10 oz Cups (78mm)</h3>
+                <div class="product-grid" style="margin-bottom: 3rem;">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/78mm-PET-Cup-Flat-Lid-straw-slot-500x500.jpg"
+                                alt="7,8 & 10 OZ FLAT PET CLEAR LID - STRAW SLOT">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">7,8 & 10 OZ FLAT PET CLEAR LID - STRAW SLOT</h3>
+                            <a href="../products/78-10-oz-flat-pet-clear-lid-straw-slot.html" class="link-arrow">View
+                                Details</a>
+                        </div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-title">5 OZ PET CLEAR INSERT FOR 98mm CUPS</h3>
-                        <a href="../products/5-oz-pet-clear-insert-98mm-cups.html" class="link-arrow">View Details</a>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/78mm-PET-Cup-Dome-Lid-round-hole-500x500.jpg"
+                                alt="7,8 & 10 OZ DOME PET CLEAR LID - ROUND HOLE">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">7,8 & 10 OZ DOME PET CLEAR LID - ROUND HOLE</h3>
+                            <a href="../products/78-10-oz-dome-pet-clear-lid-round-hole.html" class="link-arrow">View
+                                Details</a>
+                        </div>
                     </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://eateryessentials.com/wp-content/uploads/2023/07/PTLID-F92NS-T.jpg" alt="9S, 12 & 16OZ FLAT PET LID WITH TAB NO SLOT" onerror="this.src='../assets/images/logo-blue_green.png'">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">9S, 12 & 16OZ FLAT PET LID WITH TAB NO SLOT</h3>
-                        <a href="../products/9s-12-16oz-flat-pet-lid-with-tab-no-slot.html" class="link-arrow">View Details</a>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/78mm-PET-Cup-Dome-Lid-no-hole-500x500.jpg"
+                                alt="7,8 & 10 OZ DOME PET CLEAR LID - NO HOLE">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">7,8 & 10 OZ DOME PET CLEAR LID - NO HOLE</h3>
+                            <a href="../products/78-10-oz-dome-pet-clear-lid-no-hole.html" class="link-arrow">View
+                                Details</a>
+                        </div>
                     </div>
                 </div>
 
+                <h3 style="margin-bottom: 1.5rem; color: #666; font-size: 1.2rem;">Fits 9S, 12, & 16 oz Cups (92mm)</h3>
+                <div class="product-grid" style="margin-bottom: 3rem;">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2023/07/PTLID-F92NS-T.jpg"
+                                alt="9S, 12 & 16OZ FLAT PET LID WITH TAB NO SLOT">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">9S, 12 & 16OZ FLAT PET LID WITH TAB NO SLOT</h3>
+                            <a href="../products/9s-12-16oz-flat-pet-lid-with-tab-no-slot.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2023/07/PTLID-D92SDNH.jpg"
+                                alt="9S, 12 & 16OZ SQUARE DOME PET CLEAR LID NO HOLE">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">9S, 12 & 16OZ SQUARE DOME PET CLEAR LID NO HOLE</h3>
+                            <a href="../products/9s-12-16oz-square-dome-pet-lid-no-hole.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/92mm-PET-Cup-Flat-Lid-no-slot-500x500.jpg"
+                                alt="9S,12 & 16 OZ FLAT PET CLEAR LID - NO SLOT">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">9S,12 & 16 OZ FLAT PET CLEAR LID - NO SLOT</h3>
+                            <a href="../products/9s12-oz-flat-pet-clear-lid-no-slot.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/92mm-PET-Cup-Flat-Lid-straw-slot-500x500.jpg"
+                                alt="9S,12 & 16 OZ FLAT PET CLEAR LID - STRAW SLOT">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">9S,12 & 16 OZ FLAT PET CLEAR LID - STRAW SLOT</h3>
+                            <a href="../products/9s12-oz-flat-pet-clear-lid-straw-slot.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/92mm-PET-Cup-Dome-Lid-no-slot-500x500.jpg"
+                                alt="9S,12 & 16 OZ DOME PET CLEAR LID - NO HOLE">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">9S,12 & 16 OZ DOME PET CLEAR LID - NO HOLE</h3>
+                            <a href="../products/9s12-16-oz-dome-pet-clear-lid-no-hole.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/92mm-PET-Cup-Dome-Lid-round-hole-500x500.jpg"
+                                alt="9S,12 & 16 OZ DOME PET CLEAR LID - ROUND HOLE">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">9S,12 & 16 OZ DOME PET CLEAR LID - ROUND HOLE</h3>
+                            <a href="../products/9s12-16-oz-dome-pet-clear-lid-round-hole.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/92mm-PET-Cup-Dome-Lid-wide-hole-500x500.jpg"
+                                alt="9S,12 & 16 OZ DOME PET CLEAR LID - WIDE HOLE">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">9S,12 & 16 OZ DOME PET CLEAR LID - WIDE HOLE</h3>
+                            <a href="../products/9s12-16-oz-dome-pet-clear-lid-wide-hole.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/92mm-PET-Cup-Dome-Lid-straw-slot-B-500x500.jpg"
+                                alt="9S,12 & 16 OZ DOME PET CLEAR LID - STRAW SLOT">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">9S,12 & 16 OZ DOME PET CLEAR LID - STRAW SLOT</h3>
+                            <a href="../products/9s12-16-oz-dome-pet-clear-lid-straw-slot.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="margin-bottom: 1.5rem; color: #666; font-size: 1.2rem;">Fits 12/14 ~ 24 oz Cups (98mm)</h3>
+                <div class="product-grid" style="margin-bottom: 3rem;">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/98mm-PET-Cup-Flat-Lid-no-slot-500x500.jpg"
+                                alt="12/14~24 OZ FLAT PET CLEAR LID - NO SLOT">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">12/14~24 OZ FLAT PET CLEAR LID - NO SLOT</h3>
+                            <a href="../products/121424-oz-flat-pet-clear-lid-no-slot.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/98mm-PET-Cup-Flat-Lid-straw-slot-500x500.jpg"
+                                alt="12/14~24 OZ FLAT PET CLEAR LID - STRAW SLOT">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">12/14~24 OZ FLAT PET CLEAR LID - STRAW SLOT</h3>
+                            <a href="../products/121424-oz-flat-pet-clear-lid-straw-slot.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/PET-98mm-Sip-Lid-2-500x500.jpg"
+                                alt="12/14~24 OZ FLAT PET CLEAR LID - SIP LID">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">12/14~24 OZ FLAT PET CLEAR LID - SIP LID</h3>
+                            <a href="../products/121424-oz-flat-pet-clear-lid-sip-lid.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/98mm-PET-Cup-Dome-Lid-no-hole-500x500.jpg"
+                                alt="12/14~24 OZ DOME PET CLEAR LID - NO HOLE">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">12/14~24 OZ DOME PET CLEAR LID - NO HOLE</h3>
+                            <a href="../products/121424-oz-dome-pet-clear-lid-no-hole.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/98mm-PET-Cup-Dome-Lid-round-hole-500x500.jpg"
+                                alt="12/14~24 OZ DOME PET CLEAR LID - ROUND HOLE">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">12/14~24 OZ DOME PET CLEAR LID - ROUND HOLE</h3>
+                            <a href="../products/121424-oz-dome-pet-clear-lid-round-hole.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/98mm-PET-Cup-Dome-Lid-straw-slot-B-500x500.jpg"
+                                alt="12/14~24 OZ DOME PET CLEAR LID - STRAW SLOT">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">12/14~24 OZ DOME PET CLEAR LID - STRAW SLOT</h3>
+                            <a href="../products/121424-oz-dome-pet-clear-lid-straw-slot.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/98mm-PET-Cup-Dome-Lid-wide-hole-500x500.jpg"
+                                alt="12/14~24 OZ DOME PET CLEAR LID - WIDE HOLE">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">12/14~24 OZ DOME PET CLEAR LID - WIDE HOLE</h3>
+                            <a href="../products/121424-oz-dome-pet-clear-lid-wide-hole.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="margin-bottom: 1.5rem; color: #666; font-size: 1.2rem;">Fits 32 oz Cups (107mm)</h3>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/107mm-PET-Cup-Flat-Lid-straw-slot-500x500.jpg"
+                                alt="32 OZ FLAT PET CLEAR LID - STRAW SLOT">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">32 OZ FLAT PET CLEAR LID - STRAW SLOT</h3>
+                            <a href="../products/32-oz-flat-pet-clear-lid-straw-slot.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/107mm-PET-Cup-Dome-Lid-round-hole-500x500.jpg"
+                                alt="32 OZ DOME PET CLEAR LID - ROUND HOLE">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">32 OZ DOME PET CLEAR LID - ROUND HOLE</h3>
+                            <a href="../products/32-oz-dome-pet-clear-lid-round-hole.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://eateryessentials.com/wp-content/uploads/2020/06/107mm-PET-Cup-Dome-Lid-straw-hole-A-500x500.jpg"
+                                alt="32 OZ DOME PET CLEAR LID - STRAW SLOT">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">32 OZ DOME PET CLEAR LID - STRAW SLOT</h3>
+                            <a href="../products/32-oz-dome-pet-clear-lid-straw-slot.html" class="link-arrow">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="pagination" style="display: flex; justify-content: center; gap: 1rem; margin-top: 3rem;">
-                <a href="kodacup-pet-clear-cups.html" style="padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; background: var(--primary); color: white;">1</a>                <a href="kodacup-pet-clear-cups-page-2.html" style="padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; background: #f4f4f4;">2</a>                <a href="kodacup-pet-clear-cups-page-3.html" style="padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; background: #f4f4f4;">3</a>
-            </div>
+
         </main>
     </div>
-        <footer class="site-footer">
+
+    
+    <!-- Sales Sheets Section -->
+    <section class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <span class="section-subtitle">Downloads</span>
+                <h2 class="section-title">Related Resources</h2>
+                <p class="section-desc">Download product specifications and sales sheets.</p>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="../assets/images/cover-PET-Clear-Cups-All-Lids.jpg" alt="PET Clear Cups & All Lids"
+                            onerror="this.src='../assets/images/logo-blue_green.png'">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">PET Clear Cups & All Lids</h3>
+                        <a href="https://eateryessentials.com/wp-content/uploads/2025/05/Sales-Sheet-PET-Clear-Cups-All-Lids.pdf"
+                            class="link-arrow" target="_blank">📄 Download PDF</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="../assets/images/cover-PLA-Cups-Lids.jpg" alt="PLA Clear Cups & Lids"
+                            onerror="this.src='../assets/images/logo-blue_green.png'">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">PLA Clear Cups & Lids</h3>
+                        <a href="https://eateryessentials.com/wp-content/uploads/2025/07/Sales-Sheet-PLA-Cups-Lids.pdf"
+                            class="link-arrow" target="_blank">📄 Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="site-footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-col">
                     <img src="../assets/images/logo-white.png" alt="Eatery Essentials" class="footer-logo">
-                    <p>Innovative disposable packaging solutions for food service, processors, supermarkets and C-Stores.</p>
+                    <p>Innovative disposable packaging solutions for food service, processors, supermarkets and
+                        C-Stores.</p>
                     <p style="margin-top: 1rem;">2425 Danieldale Rd<br>Dallas, TX 75237</p>
                     <p>info@eateryessentials.com</p>
                     <div class="social-links">
-                        <a href="https://facebook.com/eateryessentials" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://linkedin.com/company/eateryessentials" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://twitter.com/eateryessentials" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/eateryessentials" target="_blank" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://linkedin.com/company/eateryessentials" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/eateryessentials" target="_blank" aria-label="Twitter"><i
+                                class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -291,16 +689,9 @@
             </div>
         </div>
     </footer>
-    
-    <!-- Cookie Banner -->
-    <div id="cookie-banner" class="cookie-banner">
-        <div class="cookie-content">
-            <div class="cookie-icon"><i class="fas fa-cookie-bite"></i></div>
-            <p>We use cookies to enhance your experience, analyze site traffic, and serve tailored content. By continuing to browse, you agree to our use of cookies as described in our <a href="../privacy-policy.html">Privacy Policy</a>.</p>
-            <div class="cookie-actions">
-                <button id="reject-cookies" class="btn btn-outline cookie-btn-reject">Reject</button>
-                <button id="accept-cookies" class="btn cookie-btn-accept">Accept</button>
-            </div>
-        </div>
-    </div>
-</body></html>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
+

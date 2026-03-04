@@ -12,83 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .brand-p-hero {
-            padding: 10rem 0 6rem;
-            background-color: #009d42;
-            /* But-N-Loc Green */
-            color: white;
-            text-align: center;
-            background-image: linear-gradient(rgba(0, 157, 66, 0.85), rgba(0, 157, 66, 0.85)), url('assets/images/home-featuredBrands-BUT-N-LOC.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .brand-p-hero .brand-logo-large {
-            width: 320px;
-            margin-bottom: 2rem;
-            filter: brightness(0) invert(1);
-        }
-
-        .brand-p-hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: white;
-        }
-
-        .feature-highlight {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            margin: 6rem 0;
-            flex-wrap: wrap;
-        }
-
-        .feature-highlight:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .feature-content {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .feature-image {
-            flex: 1;
-            min-width: 300px;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-xl);
-        }
-
-        .feature-image img {
-            width: 100%;
-            display: block;
-        }
-
-        .tech-icons {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .tech-icon-card {
-            text-align: center;
-            padding: 2rem;
-            background: var(--bg-light);
-            border-radius: var(--radius-md);
-        }
-
-        .tech-icon-card i {
-            font-size: 2.5rem;
-            color: #009d42;
-            margin-bottom: 1rem;
-        }
-    </style>
 </head>
 
 <body>
@@ -116,30 +41,11 @@
                                             Containers</a></li>
                                     <li class="menu-item"><a href="category/kodacup-hinged-lid-containers.html">Hinged
                                             Containers</a></li>
+                                    <li class="menu-item"><a href="category/kodacup-film-seal-containers.html">Film Seal Containers</a></li>
                                     <li class="menu-item"><a href="category/kodacup-clear-salad-bowls.html">Plastic
                                             Salad Bowls</a></li>
                                     <li class="menu-item"><a href="category/kodacup-cake-bakery-containers.html">Cake &
                                             Bakery</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="category/but-n-loc.html">Shop By Lid</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="category/but-n-loc.html">Tamper Evident</a></li>
-                                    <li class="menu-item"><a href="category/kodacup-hinged-lid-containers.html">Hinged
-                                            Lid</a></li>
-                                    <li class="menu-item"><a href="products.html#vented-lids">Vented Lid</a></li>
-                                    <li class="menu-item"><a href="products.html#dome-flat-lids">Dome & Flat Lids</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="products.html#size-medium">Shop By Size</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="products.html#size-small">Under 10 oz</a></li>
-                                    <li class="menu-item"><a href="products.html#size-medium">12 oz - 16 oz</a></li>
-                                    <li class="menu-item"><a href="products.html#size-large">20 oz - 32 oz</a></li>
-                                    <li class="menu-item"><a href="products.html#size-xl">40 oz +</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item"><a href="but-n-loc-closing-machine.html">BUT-N-LOC Closing Machine</a>
@@ -177,81 +83,151 @@
         </div>
     </header>
 
-    <section class="brand-p-hero">
-        <div class="container">
-            <img src="assets/images/BUT-N-LOC.png" alt="But-N-Loc Logo" class="brand-logo-large">
-            <h1>Superior Tamper-Evident Security</h1>
-            <p>The patented button-locking technology for total peace of mind.</p>
+    <section class="brand-hero but-n-loc-theme">
+        <div class="brand-hero-bg">
+            <img src="assets/images/TAMPER-EVIDENT-CONTAINERS.jpg" alt="But-N-Loc Security Background">
+        </div>
+        <div class="brand-hero-overlay"></div>
+        <div class="brand-hero-content">
+            <img src="assets/images/BUT-N-LOC.png" alt="But-N-Loc Logo" class="brand-hero-logo">
+            <h1>The Gold Standard in Food Security</h1>
+            <p>Our patented button-locking technology provides visible, tactile confirmation that your product remains
+                untouched from kitchen to consumer.</p>
+            <div class="hero-actions">
+                <a href="#how-it-works" class="btn btn-white">See the Mechanism</a>
+                <a href="catalog.html" class="btn btn-outline-white">Technical Specs</a>
+            </div>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
             <div class="text-center" style="max-width: 800px; margin: 0 auto 4rem;">
-                <span class="section-subtitle" style="color: #009d42;">Innovation in Safety</span>
-                <h2 class="section-title">The Next Generation of Food Security</h2>
-                <p class="section-desc">But-N-Loc is more than just a container—it's a comprehensive security system for
-                    your food products. Our patented design provides visible and tactile confirmation of freshness and
-                    safety, and requires the removal of the button-seal to open.</p>
+                <span class="section-subtitle" style="color: var(--primary);">Superior Engineering</span>
+                <h2 class="section-title">Beyond Tamper-Evident</h2>
+                <p class="section-desc">Conventional "tamper-evident" labels can be circumvented. BUT-N-LOC is an
+                    integrated architectural solution. Once the patented button is engaged, the container cannot be
+                    opened without breaking the security seal.</p>
             </div>
 
-            <div class="feature-highlight">
-                <div class="feature-content">
-                    <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--dark);">Patented Button-Lock
-                        Mechanism</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">The heart of But-N-Loc is the
-                        unique button seal. Once closed, the container stays locked until the user detaches the security
-                        tab. This prevents "grazing" in retail environments and ensures that your customers are the
-                        first to open the package.</p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;"><i
-                                class="fas fa-check-circle" style="color: #009d42;"></i> Visual confirmation of locking
-                        </li>
-                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;"><i
-                                class="fas fa-check-circle" style="color: #009d42;"></i> No additional shrink bands
-                            needed</li>
-                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;"><i
-                                class="fas fa-check-circle" style="color: #009d42;"></i> Rapid fulfillment-friendly
-                            design</li>
-                    </ul>
+            <div class="brand-feature-grid">
+                <div class="feature-reveal-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Mechanical Engagement</h3>
+                    <p>Unlike adhesive seals, our physical lock is built into the container's geometry. You get a
+                        tactile "click" that guarantees a hermetic-quality seal.</p>
                 </div>
-                <div class="feature-image">
-                    <img src="assets/images/but-n-loc-tech-new.png" alt="But-N-Loc Technology">
+                <div class="feature-reveal-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Visual Verification</h3>
+                    <p>The "broken button" indicator is visible from several feet away, allowing retail staff and
+                        customers to verify safety at a glance.</p>
                 </div>
-            </div>
-
-            <div class="tech-icons">
-                <div class="tech-icon-card">
-                    <i class="fas fa-search"></i>
-                    <h3>Visible Seal</h3>
-                    <p>Customers can easily see if the container has been tampered with before purchase.</p>
-                </div>
-                <div class="tech-icon-card">
+                <div class="feature-reveal-card">
                     <i class="fas fa-shield-alt"></i>
-                    <h3>Superior Security</h3>
-                    <p>Strong locking tabs prevent accidental opening during transport and delivery.</p>
-                </div>
-                <div class="tech-icon-card">
-                    <i class="fas fa-recycle"></i>
-                    <h3>Eco-Friendly</h3>
-                    <p>Designed with rPET, maintaining our commitment to 30% recycled content.</p>
+                    <h3>Structural Integrity</h3>
+                    <p>Heavy-duty rPET construction ensures the container maintains its shape and security even under
+                        heavy stacking in modern logistics.</p>
                 </div>
             </div>
 
-            <div class="text-center" style="margin-top: 5rem; margin-bottom: 5rem;">
-                <img src="assets/images/but-n-loc-hinged-lid-type.png" alt="BUT-N-LOC Hinged Lid Type Instructions"
-                    style="max-width: 100%; max-height: 500px; height: auto; object-fit: contain; display: block; margin: 0 auto;">
+            <div class="spec-highlight-grid">
+                <div class="spec-item">
+                    <h4>Security Level</h4>
+                    <div class="spec-value">MIL-GRADE</div>
+                </div>
+                <div class="spec-item">
+                    <h4>Recycling Code</h4>
+                    <div class="spec-value">#1 PET</div>
+                </div>
+                <div class="spec-item">
+                    <h4>Clarity</h4>
+                    <div class="spec-value">ULTRA</div>
+                </div>
+                <div class="spec-item">
+                    <h4>Automation</h4>
+                    <div class="spec-value">NATIVE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lifecycle-section" id="how-it-works" style="background: #004d2b;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 5rem;">
+                <span class="section-subtitle" style="color: #88ffbb;">The 3-Step Protocol</span>
+                <h2 class="section-title" style="color: white;">How Security Works</h2>
             </div>
 
-            <div class="text-center" style="margin-top: 6rem;">
+            <div class="lifecycle-grid">
+                <div class="lifecycle-step">
+                    <div class="step-number">01</div>
+                    <h3>Press to Engage</h3>
+                    <p>Simply close the lid and apply light pressure to the center button. You will hear and feel the
+                        patented mechanical lock activate.</p>
+                </div>
+                <div class="lifecycle-step">
+                    <div class="step-number">02</div>
+                    <h3>Secure Transit</h3>
+                    <p>The container is now physically locked. It resists accidental opening from drops, shifts, or
+                        external pressure during delivery.</p>
+                </div>
+                <div class="lifecycle-step">
+                    <div class="step-number">03</div>
+                    <h3>Consumer Access</h3>
+                    <p>The end-user detaches the security tab to release the lock. This action permanently alters the
+                        container, proving first-time access.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem; text-align: center;">
+                <img src="assets/images/but-n-loc-instructions.png" alt="BUT-N-LOC Visual Guide"
+                    style="max-width: 100%; border-radius: var(--radius-lg); box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 5rem;">
+                <span class="section-subtitle">Industrial Optimization</span>
                 <h2 class="section-title">Automated Closing Solutions</h2>
-                <p class="section-desc">For high-volume processors, we offer the VPA-200 and other automated closing
-                    machines designed specifically for the But-N-Loc line.</p>
-                <div style="max-width: 600px; margin: 3rem auto;">
-                    <img src="assets/images/but-n-loc-closing-machine.jpg" alt="Closing Machine"
-                        style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+                <p class="section-desc">Designed for high-throughput food processors. Our But-N-Loc containers are
+                    engineered for seamless integration with our robotic closing systems.</p>
+            </div>
+
+            <div class="brand-gallery-large">
+                <div class="gallery-large-item" style="height: 600px;">
+                    <img src="assets/images/but-n-loc-closing-machine.jpg" alt="VPA-200 Closing Machine">
+                    <div class="gallery-large-content">
+                        <span class="video-tag" style="background: var(--primary);">Flagship Solution</span>
+                        <h3>VPA-200 Auto-Closing System</h3>
+                        <p>Fully automated inline system designed to seal 60+ containers per minute with 100% lock
+                            verification.</p>
+                        <a href="but-n-loc-closing-machine.html" class="btn btn-white btn-sm">Watch Video & Specs</a>
+                    </div>
                 </div>
-                <a href="but-n-loc-closing-machine.html" class="btn btn-primary">View Machines</a>
+                <div class="gallery-large-item" style="height: 600px;">
+                    <img src="assets/images/but-n-loc-tech-new.png" alt="Tamper Evident Tech">
+                    <div class="gallery-large-content">
+                        <h3>Custom Integration</h3>
+                        <p>Our engineering team can assist in integrating But-N-Loc technology into your existing
+                            production lines.</p>
+                        <a href="contact.html" class="link-arrow">Consult an Engineer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner"
+        style="margin-top: 5rem; background: linear-gradient(135deg, #009d42 0%, #004d2b 100%);">
+        <div class="container">
+            <h2>Bulletproof Your Food Safety</h2>
+            <p>Upgrade to the industry's most trusted mechanical locking system today.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-white">Speak with an Expert</a>
+                <a href="https://crm.eateryessentials.com/sample" class="btn btn-outline-white">Get a Sample Kit</a>
             </div>
         </div>
     </section>
@@ -282,20 +258,6 @@
     </footer>
 
     <script src="js/main.js"></script>
-
-    <!-- Cookie Banner -->
-    <div id="cookie-banner" class="cookie-banner">
-        <div class="cookie-content">
-            <div class="cookie-icon"><i class="fas fa-cookie-bite"></i></div>
-            <p>We use cookies to enhance your experience, analyze site traffic, and serve tailored content. By
-                continuing to browse, you agree to our use of cookies as described in our <a
-                    href="privacy-policy.html">Privacy Policy</a>.</p>
-            <div class="cookie-actions">
-                <button id="reject-cookies" class="btn btn-outline cookie-btn-reject">Reject</button>
-                <button id="accept-cookies" class="btn cookie-btn-accept">Accept</button>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>
