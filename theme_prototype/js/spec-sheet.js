@@ -5,10 +5,10 @@
  * a full-screen modal with a printable spec sheet.
  */
 (function () {
-    'use strict';
+  'use strict';
 
-    /* ─── Inject modal HTML once ─────────────────────────────────── */
-    const modalHTML = `
+  /* ─── Inject modal HTML once ─────────────────────────────────── */
+  const modalHTML = `
   <div id="spec-modal" role="dialog" aria-modal="true" aria-label="Product Spec Sheet"
     style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.55);
            backdrop-filter:blur(4px);overflow-y:auto;padding:2rem 1rem;">
@@ -81,88 +81,89 @@
     </div>
   </div>`;
 
-    document.body.insertAdjacentHTML('beforeend', modalHTML);
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
 
-    /* ─── Find all "Spec Sheet" buttons on the page ───────────────── */
-    function findSpecBtn() {
-        return [...document.querySelectorAll('a, button')].filter(el =>
-            el.textContent.trim().toLowerCase() === 'spec sheet'
-        );
-    }
+  /* ─── Find all "Spec Sheet" buttons on the page ───────────────── */
+  function findSpecBtn() {
+    return [...document.querySelectorAll('a, button')].filter(el => {
+      const txt = el.textContent.trim().toLowerCase();
+      return txt === 'spec sheet' || txt === 'specification sheet';
+    });
+  }
 
-    /* ─── Gather product data from the page ─────────────────────────*/
-    function scrapeProduct() {
-        const title = document.querySelector('h1')?.textContent?.trim() ?? 'Product';
-        const cat = document.querySelector('.product-cat')?.textContent?.trim() ?? '';
-        const desc = document.querySelector('.product-desc')?.textContent?.trim() ?? '';
-        const sku = (() => {
-            const allDescs = document.querySelectorAll('.product-desc');
-            for (const d of allDescs) {
-                if (d.textContent.includes('SKU:')) return d.textContent.trim();
-            }
-            return '';
-        })();
-        const imgSrc = document.querySelector('.product-gallery img, .main-image')?.src ?? '';
-        const rows = [...(document.querySelector('.specs-table')?.querySelectorAll('tr') ?? [])];
+  /* ─── Gather product data from the page ─────────────────────────*/
+  function scrapeProduct() {
+    const title = document.querySelector('h1')?.textContent?.trim() ?? 'Product';
+    const cat = document.querySelector('.product-cat')?.textContent?.trim() ?? '';
+    const desc = document.querySelector('.product-desc')?.textContent?.trim() ?? '';
+    const sku = (() => {
+      const allDescs = document.querySelectorAll('.product-desc');
+      for (const d of allDescs) {
+        if (d.textContent.includes('SKU:')) return d.textContent.trim();
+      }
+      return '';
+    })();
+    const imgSrc = document.querySelector('.product-gallery img, .main-image')?.src ?? '';
+    const rows = [...(document.querySelector('.specs-table')?.querySelectorAll('tr') ?? [])];
 
-        // Determine logo path (handle different page depths)
-        const depth = window.location.pathname.split('/').filter(Boolean).length;
-        const logoPath = depth >= 3
-            ? '../../assets/images/logo-blue_green.png'
-            : '../assets/images/logo-blue_green.png';
+    // Determine logo path (handle different page depths)
+    const depth = window.location.pathname.split('/').filter(Boolean).length;
+    const logoPath = depth >= 3
+      ? '../../assets/images/logo-blue_green.png'
+      : '../assets/images/logo-blue_green.png';
 
-        return { title, cat, desc, sku, imgSrc, rows, logoPath };
-    }
+    return { title, cat, desc, sku, imgSrc, rows, logoPath };
+  }
 
-    /* ─── Populate and open modal ─────────────────────────────────── */
-    function openModal() {
-        const { title, cat, desc, sku, imgSrc, rows, logoPath } = scrapeProduct();
+  /* ─── Populate and open modal ─────────────────────────────────── */
+  function openModal() {
+    const { title, cat, desc, sku, imgSrc, rows, logoPath } = scrapeProduct();
 
-        document.getElementById('ss-logo').src = logoPath;
-        document.getElementById('ss-title').textContent = title;
-        document.getElementById('ss-cat').textContent = cat;
-        document.getElementById('ss-desc').textContent = sku ? desc : desc;
-        document.getElementById('ss-sku').textContent = sku;
-        document.getElementById('ss-image').src = imgSrc;
-        document.getElementById('ss-image').alt = title;
-        document.getElementById('ss-date').textContent =
-            'Generated: ' + new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('ss-logo').src = logoPath;
+    document.getElementById('ss-title').textContent = title;
+    document.getElementById('ss-cat').textContent = cat;
+    document.getElementById('ss-desc').textContent = sku ? desc : desc;
+    document.getElementById('ss-sku').textContent = sku;
+    document.getElementById('ss-image').src = imgSrc;
+    document.getElementById('ss-image').alt = title;
+    document.getElementById('ss-date').textContent =
+      'Generated: ' + new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
-        // Build spec table
-        const table = document.getElementById('ss-table');
-        table.innerHTML = '';
-        rows.forEach((row, i) => {
-            const th = row.querySelector('th');
-            const td = row.querySelector('td');
-            if (!th || !td) return;
-            const tr = document.createElement('tr');
-            tr.style.background = i % 2 === 0 ? '#f9fafb' : '#fff';
-            tr.innerHTML = `
+    // Build spec table
+    const table = document.getElementById('ss-table');
+    table.innerHTML = '';
+    rows.forEach((row, i) => {
+      const th = row.querySelector('th');
+      const td = row.querySelector('td');
+      if (!th || !td) return;
+      const tr = document.createElement('tr');
+      tr.style.background = i % 2 === 0 ? '#f9fafb' : '#fff';
+      tr.innerHTML = `
         <td style="padding:0.6rem 1rem;font-weight:700;color:#374151;width:42%;border-bottom:1px solid #e5e7eb;">${th.textContent}</td>
         <td style="padding:0.6rem 1rem;color:#111827;border-bottom:1px solid #e5e7eb;">${td.textContent}</td>
       `;
-            table.appendChild(tr);
-        });
+      table.appendChild(tr);
+    });
 
-        // Show modal
-        const modal = document.getElementById('spec-modal');
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-        // Scroll to top of modal
-        setTimeout(() => { modal.scrollTop = 0; }, 10);
-    }
+    // Show modal
+    const modal = document.getElementById('spec-modal');
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    // Scroll to top of modal
+    setTimeout(() => { modal.scrollTop = 0; }, 10);
+  }
 
-    /* ─── Close modal ─────────────────────────────────────────────── */
-    function closeModal() {
-        document.getElementById('spec-modal').style.display = 'none';
-        document.body.style.overflow = '';
-    }
+  /* ─── Close modal ─────────────────────────────────────────────── */
+  function closeModal() {
+    document.getElementById('spec-modal').style.display = 'none';
+    document.body.style.overflow = '';
+  }
 
-    /* ─── Print handler ───────────────────────────────────────────── */
-    function printSheet() {
-        const inner = document.getElementById('spec-modal-inner');
-        const win = window.open('', '_blank', 'width=850,height=1100');
-        win.document.write(`
+  /* ─── Print handler ───────────────────────────────────────────── */
+  function printSheet() {
+    const inner = document.getElementById('spec-modal-inner');
+    const win = window.open('', '_blank', 'width=850,height=1100');
+    win.document.write(`
       <!DOCTYPE html>
       <html>
       <head>
@@ -178,38 +179,38 @@
       <body>${inner.innerHTML}</body>
       </html>
     `);
-        win.document.close();
-        setTimeout(() => { win.focus(); win.print(); }, 600);
-    }
+    win.document.close();
+    setTimeout(() => { win.focus(); win.print(); }, 600);
+  }
 
-    /* ─── Bind events after DOM ready ─────────────────────────────── */
-    function init() {
-        const btns = findSpecBtn();
-        btns.forEach(btn => {
-            btn.addEventListener('click', function (e) {
-                e.preventDefault();
-                openModal();
-            });
-        });
+  /* ─── Bind events after DOM ready ─────────────────────────────── */
+  function init() {
+    const btns = findSpecBtn();
+    btns.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        openModal();
+      });
+    });
 
-        document.getElementById('ss-close-btn').addEventListener('click', closeModal);
-        document.getElementById('ss-print-btn').addEventListener('click', printSheet);
+    document.getElementById('ss-close-btn').addEventListener('click', closeModal);
+    document.getElementById('ss-print-btn').addEventListener('click', printSheet);
 
-        // Close on backdrop click
-        document.getElementById('spec-modal').addEventListener('click', function (e) {
-            if (e.target === this) closeModal();
-        });
+    // Close on backdrop click
+    document.getElementById('spec-modal').addEventListener('click', function (e) {
+      if (e.target === this) closeModal();
+    });
 
-        // Close on Escape
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeModal();
-        });
-    }
+    // Close on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  }
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 
 })();

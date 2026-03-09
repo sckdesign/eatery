@@ -59,7 +59,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    </head>
 
 <body>
 
@@ -79,7 +80,7 @@
                         <ul class="sub-menu">
                             <li class="menu-item"><a href="products.html">All Products</a></li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="but-n-loc.html">BUT-N-LOC (Tamper Evident)</a>
+                                <a href="but-n-loc.html">BUT-N-LOC</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="category/but-n-loc-round-bowls.html">Tamper Evident
                                             Round Bowls</a></li>
@@ -101,7 +102,7 @@
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="kodacup.html">KODA CUP (General Packaging)</a>
+                                <a href="kodacup.html">KODA CUP</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="category/kodacup-pet-clear-cups.html">Clear Cups</a>
                                     </li>
@@ -375,6 +376,8 @@
                         alt="IFPA"></a>
                 <a href="https://cpma.ca/" target="_blank"><img
                         src="assets/images/CPMA-282x137-c-center-removebg-preview.png" alt="CPMA"></a>
+                <a href="https://www.iddba.org/" target="_blank"><img src="assets/images/IDDBAlogo-removebg-preview.png"
+                        alt="IDDBA"></a>
             </div>
         </div>
     </section>
@@ -480,11 +483,10 @@
                 </div>
                 <div class="footer-col">
                     <h4>Products</h4>
-                    <a href="category/kodacup-pet-clear-cups.html">Koda Cup Line</a>
-                    <a href="category/kodacup-deli-containers.html">Round Deli Containers</a>
-                    <a href="category/kodacup-hinged-lid-containers.html">Hinged Lid</a>
-                    <a href="category/kodacup-film-seal-containers.html">Film Seal</a>
-                    <a href="products.html">Featured Brands</a>
+                    <a href="products.html">All Products</a>
+                    <a href="but-n-loc.html">BUT-N-LOC</a>
+                    <a href="kodacup.html">KODA CUP</a>
+                    <a href="category/grab-go.html">Grab & Go Solutions</a>
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
@@ -511,7 +513,8 @@
     <script src="js/main.js"></script>
 
 
-    <script src="js/search.js"></script>
+    <script src="js/search-data.js"></script>
+<script src="js/search.js"></script>
 
     <!-- Cookie Banner -->
     <div id="cookie-banner" class="cookie-banner">
@@ -526,6 +529,21 @@
             </div>
         </div>
     </div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <div class="search-overlay-inner">
+            <button class="search-close" aria-label="Close Search">&times;</button>
+            <form class="search-form">
+                <div class="search-input-wrap">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" class="search-input" placeholder="Search products, specs, or documents..." autocomplete="off">
+                </div>
+                <div class="search-results-preview"></div>
+            </form>
+        </div>
+    </div>
+
 </body>
 
 </html>
