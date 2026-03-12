@@ -149,26 +149,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const rejectCookiesBtn = document.getElementById('reject-cookies');
 
     if (cookieBanner) {
-        // Check if user has already made a preference choice
-        if (!localStorage.getItem('eatery_cookies_preference')) {
-            // Slight delay before showing for better UX
+        try {
+            // Check if user has already made a preference choice
+            const preference = localStorage.getItem('eatery_cookies_preference');
+            if (!preference) {
+                // Slight delay before showing for better UX
+                setTimeout(() => {
+                    cookieBanner.classList.add('show');
+                }, 1000);
+            }
+
+            const hideBanner = (pref) => {
+                localStorage.setItem('eatery_cookies_preference', pref);
+                cookieBanner.classList.remove('show');
+            };
+
+            if (acceptCookiesBtn) {
+                acceptCookiesBtn.addEventListener('click', () => hideBanner('accepted'));
+            }
+
+            if (rejectCookiesBtn) {
+                rejectCookiesBtn.addEventListener('click', () => hideBanner('rejected'));
+            }
+        } catch (e) {
+            console.warn('Cookie banner: localStorage not available', e);
+            // Fallback: show banner anyway if no preference can be stored
             setTimeout(() => {
                 cookieBanner.classList.add('show');
             }, 1000);
-        }
 
-        if (acceptCookiesBtn) {
-            acceptCookiesBtn.addEventListener('click', () => {
-                localStorage.setItem('eatery_cookies_preference', 'accepted');
+            const forceHide = () => {
                 cookieBanner.classList.remove('show');
-            });
-        }
-
-        if (rejectCookiesBtn) {
-            rejectCookiesBtn.addEventListener('click', () => {
-                localStorage.setItem('eatery_cookies_preference', 'rejected');
-                cookieBanner.classList.remove('show');
-            });
+            };
+            if (acceptCookiesBtn) acceptCookiesBtn.addEventListener('click', forceHide);
+            if (rejectCookiesBtn) rejectCookiesBtn.addEventListener('click', forceHide);
         }
     }
 

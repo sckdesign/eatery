@@ -376,79 +376,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
-
-
-    <script src="js/search-data.js"></script>
-<script src="js/search.js"></script>
-    <script>
-        const videoModal = document.getElementById('videoModal');
-        const modalVideo = document.getElementById('modalVideo');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalDesc = document.getElementById('modalDesc');
-        const closeModal = document.getElementById('closeModal');
-        const videoCards = document.querySelectorAll('.video-card-modern');
-        const filterBtns = document.querySelectorAll('.filter-btn');
-
-        // Open Modal
-        videoCards.forEach(card => {
-            card.addEventListener('click', function () {
-                const videoSrc = this.getAttribute('data-video');
-                const title = this.getAttribute('data-title');
-                const desc = this.getAttribute('data-desc');
-
-                modalVideo.src = videoSrc;
-                modalTitle.textContent = title;
-                modalDesc.textContent = desc;
-
-                videoModal.classList.add('active');
-                modalVideo.play();
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        // Close Modal
-        function closeVideoModal() {
-            videoModal.classList.remove('active');
-            modalVideo.pause();
-            modalVideo.src = '';
-            document.body.style.overflow = '';
-        }
-
-        closeModal.addEventListener('click', closeVideoModal);
-        videoModal.addEventListener('click', (e) => {
-            if (e.target === videoModal) closeVideoModal();
-        });
-
-        // ESC Key to close
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && videoModal.classList.contains('active')) {
-                closeVideoModal();
-            }
-        });
-
-        // Filtering Logic
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', function () {
-                const filter = this.getAttribute('data-filter');
-
-                filterBtns.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-
-                videoCards.forEach(card => {
-                    const category = card.getAttribute('data-category');
-                    if (filter === 'all' || category === filter) {
-                        card.style.display = 'block';
-                        setTimeout(() => card.style.opacity = '1', 10);
-                    } else {
-                        card.style.opacity = '0';
-                        setTimeout(() => card.style.display = 'none', 400);
-                    }
-                });
-            });
-        });
-    </script>
-
     <!-- Cookie Banner -->
     <div id="cookie-banner" class="cookie-banner">
         <div class="cookie-content">
@@ -473,6 +400,14 @@
                     <input type="text" class="search-input" placeholder="Search products, specs, or documents..." autocomplete="off">
                 </div>
                 <div class="search-results-preview"></div>
+
+    <script src="js/main.js"></script>
+
+
+    <script src="js/search-data.js"></script>
+<script src="js/search.js"></script>
+
+    
             </form>
         </div>
     </div>

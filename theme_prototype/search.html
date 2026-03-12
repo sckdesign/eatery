@@ -314,30 +314,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
-    <!-- Search.js needs search-page-results on this page, load relative to theme_prototype root -->
-    <script>
-        // Adjust URL resolution: search.js uses ../url patterns for category pages,
-        // but search.html lives at the root so we patch the index before loading.
-        window.SEARCH_ROOT_OVERRIDE = true;
-    </script>
-    <script src="js/search-data.js"></script>
-<script src="js/search.js"></script>
-    <script>
-        // Update count label after results render
-        document.addEventListener('DOMContentLoaded', function () {
-            var countEl = document.getElementById('search-count-label');
-            var resultsEl = document.getElementById('search-page-results');
-            if (countEl && resultsEl) {
-                var cards = resultsEl.querySelectorAll('.search-result-card');
-                var q = new URLSearchParams(window.location.search).get('q') || '';
-                if (q) {
-                    countEl.textContent = cards.length + ' result' + (cards.length !== 1 ? 's' : '') + ' for "' + q + '"';
-                }
-            }
-        });
-    </script>
-
     <!-- Cookie Banner -->
     <div id="cookie-banner" class="cookie-banner">
         <div class="cookie-content">
@@ -362,6 +338,14 @@
                     <input type="text" class="search-input" placeholder="Search products, specs, or documents..." autocomplete="off">
                 </div>
                 <div class="search-results-preview"></div>
+
+    <script src="js/main.js"></script>
+
+
+    <script src="js/search-data.js"></script>
+<script src="js/search.js"></script>
+
+    
             </form>
         </div>
     </div>

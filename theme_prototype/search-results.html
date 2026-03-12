@@ -279,95 +279,21 @@
             <form class="search-form">
                 <div class="search-input-wrap">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" class="search-input" placeholder="Search products, specs, or documents..."
-                        autocomplete="off">
+                    <input type="text" class="search-input" placeholder="Search products, specs, or documents..." autocomplete="off">
                 </div>
                 <div class="search-results-preview"></div>
+
+    <script src="js/main.js"></script>
+
+
+    <script src="js/search-data.js"></script>
+<script src="js/search.js"></script>
+
+    
             </form>
         </div>
     </div>
 
-    <script src="js/main.js"></script>
-    <script src="js/search-data.js"></script>
-    <script src="js/search.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const params = new URLSearchParams(window.location.search);
-            const query = params.get('q');
-            const target = document.getElementById('results-target');
-            const queryDisplay = document.getElementById('search-query-display');
-
-            if (!query) {
-                target.innerHTML = '<div class="no-results-view"><i class="fa-solid fa-magnifying-glass"></i><h2>No search query provided.</h2><p>Please use the search icon in the header to find what you are looking for.</p></div>';
-                queryDisplay.textContent = '';
-                return;
-            }
-
-            queryDisplay.innerHTML = `Displaying results for: <strong>"${query}"</strong>`;
-
-            const checkIndex = setInterval(() => {
-                if (window.searchEngine && window.searchEngine.isLoaded) {
-                    clearInterval(checkIndex);
-                    renderResults();
-                }
-            }, 100);
-
-            function renderResults() {
-                const results = window.searchEngine.index
-                    .map(item => {
-                        let score = 0;
-                        const terms = query.toLowerCase().split(' ').filter(t => t.length > 0);
-                        const content = item.content.toLowerCase();
-                        const qLower = query.toLowerCase();
-
-                        if (item.sku && item.sku.toLowerCase() === qLower) score += 100;
-                        else if (item.sku && item.sku.toLowerCase().includes(qLower)) score += 50;
-
-                        terms.forEach(term => {
-                            if (item.title.toLowerCase().includes(term)) score += 10;
-                            if (item.sku && item.sku.toLowerCase().includes(term)) score += 20;
-                            if (item.specs.toLowerCase().includes(term)) score += 5;
-                            if (item.pdfs.toLowerCase().includes(term)) score += 3;
-                            if (content.includes(term)) score += 1;
-                        });
-                        return { ...item, score };
-                    })
-                    .filter(item => item.score > 0)
-                    .sort((a, b) => b.score - a.score);
-
-                if (results.length === 0) {
-                    target.innerHTML = `
-                        <div class="no-results-view">
-                            <i class="fa-solid fa-face-frown"></i>
-                            <h2>No matches found</h2>
-                            <p>We couldn't find anything matching "${query}". Try searching for specific product names, SKU numbers, or materials like "rPET".</p>
-                            <a href="products.html" class="btn btn-primary" style="margin-top: 2rem;">Browse All Products</a>
-                        </div>
-                    `;
-                } else {
-                    target.innerHTML = `
-                        <div class="results-info">Found <strong>${results.length}</strong> matches for "${query}"</div>
-                        <div class="results-grid">
-                            ${results.map(item => `
-                                <a href="${item.url}" class="result-card">
-                                    <div style="margin-bottom: 0.75rem;">
-                                        <span class="result-type">${window.searchEngine.getType(item.url)}</span>
-                                        ${item.sku ? `<span class="result-type" style="background: rgba(0, 149, 235, 0.08); color: var(--secondary); margin-left: 0.5rem;">${item.sku}</span>` : ''}
-                                    </div>
-                                    <h3>${window.searchEngine.highlight(item.title, query)}</h3>
-                                    <p>${window.searchEngine.highlight(item.description || item.specs.substring(0, 200) + '...', query)}</p>
-                                    <div class="result-meta">
-                                        <span><i class="fa-solid fa-link"></i> ${item.url}</span>
-                                        ${item.pdfs ? `<span><i class="fa-solid fa-file-pdf"></i> PDF Available</span>` : ''}
-                                    </div>
-                                </a>
-                            `).join('')}
-                        </div>
-                    `;
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>

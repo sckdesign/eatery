@@ -1,30 +1,48 @@
 const fs = require('fs');
 const path = require('path');
 
-const goodFile = fs.readFileSync('blog/rPET-sustainability-food-packaging.html', 'utf8');
-const footerMatch = goodFile.match(/<footer class="site-footer">[\s\S]*<\/html>/);
+// Use index.html as the source of truth for the footer and global elements
+const indexHtml = fs.readFileSync('index.html', 'utf8');
+const footerMatch = indexHtml.match(/<footer class="site-footer">[\s\S]*<\/html>/);
+
 if (!footerMatch) {
-    console.log("Could not find footer in source file.");
+    console.log("Could not find footer in index.html.");
     process.exit(1);
 }
-const goodFooter = footerMatch[0];
+const sourceFooterBlock = footerMatch[0];
 
-const files = fs.readdirSync('blog').filter(f => f.endsWith('.html'));
-for (const f of files) {
-    const filePath = path.join('blog', f);
+// Function to sync footer block to a file
+function syncFooter(filePath) {
     let html = fs.readFileSync(filePath, 'utf8');
-    html = html.replace(/<footer class="site-footer">[\s\S]*<\/html>/, goodFooter);
-    fs.writeFileSync(filePath, html);
-}
-console.log('Successfully standardized all blog footers.');
-
-// Check for unbalances
-for (const f of files) {
-    const html = fs.readFileSync(path.join('blog', f), 'utf8');
-    const divsMatch = html.match(/<div/g);
-    const divEndMatch = html.match(/<\/div>/g);
-    const diff = (divsMatch ? divsMatch.length : 0) - (divEndMatch ? divEndMatch.length : 0);
-    if (diff !== 0) {
-        console.log(f, 'DIV Diff:', diff);
+    // Replace everything from the footer to the end of the file
+    if (html.includes('<footer class="site-footer">')) {
+        html = html.replace(/<footer class="site-footer">[\s\S]*<\/html>/, sourceFooterBlock);
+        fs.writeFileSync(filePath, html);
+        return true;
     }
+    return false;
 }
+
+// Find all HTML files recursively
+function getAllHtmlFiles(dir, fileList = []) {
+    const files = fs.readdirSync(dir);
+    files.forEach(file => {
+        const filePath = path.join(dir, file);
+        if (fs.statSync(filePath).isDirectory()) {
+            if (file !== 'node_modules' && file !== '.git') {
+                getAllHtmlFiles(filePath, fileList);
+            }
+        } else if (file.endsWith('.html') && filePath !== 'index.html' && file !== 'new_grid.html') {
+            fileList.push(filePath);
+        }
+    });
+    return fileList;
+}
+
+const allFiles = getAllHtmlFiles('.');
+let count = 0;
+allFiles.forEach(file => {
+    if (syncFooter(file)) count++;
+});
+
+console.log(`Successfully synced footer and global elements to ${count} files.`);

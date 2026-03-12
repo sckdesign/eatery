@@ -583,66 +583,16 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
-    <script src="js/search-data.js"></script>
-    <script src="js/search.js"></script>
-    <script>
-        // Modal Video Logic
-        const videoModal = document.getElementById('videoModal');
-        const modalVideo = document.getElementById('modalVideo');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalDesc = document.getElementById('modalDesc');
-        const closeModal = document.getElementById('closeModal');
-        const videoCards = document.querySelectorAll('.video-card-modern');
-
-        videoCards.forEach(card => {
-            card.addEventListener('click', function () {
-                const videoSrc = this.getAttribute('data-video');
-                const title = this.getAttribute('data-title');
-                const desc = this.getAttribute('data-desc');
-
-                modalVideo.src = videoSrc;
-                modalTitle.textContent = title;
-                modalDesc.textContent = desc;
-
-                videoModal.classList.add('active');
-                modalVideo.play();
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        function closeVideoModal() {
-            videoModal.classList.remove('active');
-            modalVideo.pause();
-            modalVideo.src = '';
-            document.body.style.overflow = '';
-        }
-
-        if (closeModal) {
-            closeModal.addEventListener('click', closeVideoModal);
-        }
-        if (videoModal) {
-            videoModal.addEventListener('click', (e) => {
-                if (e.target === videoModal) closeVideoModal();
-            });
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && videoModal && videoModal.classList.contains('active')) {
-                closeVideoModal();
-            }
-        });
-    </script>
     <!-- Cookie Banner -->
-    <div class="cookie-banner" id="cookie-banner">
+    <div id="cookie-banner" class="cookie-banner">
         <div class="cookie-content">
             <div class="cookie-icon"><i class="fas fa-cookie-bite"></i></div>
             <p>We use cookies to enhance your experience, analyze site traffic, and serve tailored content. By
                 continuing to browse, you agree to our use of cookies as described in our <a
                     href="privacy-policy.html">Privacy Policy</a>.</p>
             <div class="cookie-actions">
-                <button class="btn btn-outline cookie-btn-reject" id="reject-cookies">Reject</button>
-                <button class="btn cookie-btn-accept" id="accept-cookies">Accept</button>
+                <button id="reject-cookies" class="btn btn-outline cookie-btn-reject">Reject</button>
+                <button id="accept-cookies" class="btn cookie-btn-accept">Accept</button>
             </div>
         </div>
     </div>
@@ -654,10 +604,17 @@
             <form class="search-form">
                 <div class="search-input-wrap">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" class="search-input" placeholder="Search products, specs, or documents..."
-                        autocomplete="off">
+                    <input type="text" class="search-input" placeholder="Search products, specs, or documents..." autocomplete="off">
                 </div>
                 <div class="search-results-preview"></div>
+
+    <script src="js/main.js"></script>
+
+
+    <script src="js/search-data.js"></script>
+<script src="js/search.js"></script>
+
+    
             </form>
         </div>
     </div>

@@ -439,7 +439,19 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-icon"><i class="fas fa-cookie-bite"></i></div>
+            <p>We use cookies to enhance your experience, analyze site traffic, and serve tailored content. By
+                continuing to browse, you agree to our use of cookies as described in our <a
+                    href="privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="cookie-actions">
+                <button id="reject-cookies" class="btn btn-outline cookie-btn-reject">Reject</button>
+                <button id="accept-cookies" class="btn cookie-btn-accept">Accept</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Search Overlay -->
     <div class="search-overlay">
@@ -451,12 +463,18 @@
                     <input type="text" class="search-input" placeholder="Search products, specs, or documents..." autocomplete="off">
                 </div>
                 <div class="search-results-preview"></div>
+
+    <script src="js/main.js"></script>
+
+
+    <script src="js/search-data.js"></script>
+<script src="js/search.js"></script>
+
+    
             </form>
         </div>
     </div>
 
-<script src="js/search-data.js"></script>
-<script src="js/search.js"></script>
 </body>
 
 </html>
