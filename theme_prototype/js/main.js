@@ -47,25 +47,22 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.addEventListener('click', toggleMenu);
 
         // Submenu Drill-down Logic (Mobile Only)
-        const menuItemsWithChildren = mainNav.querySelectorAll('.menu-item-has-children, .has-dropdown');
-        menuItemsWithChildren.forEach(item => {
-            const link = item.querySelector('a');
-            const subMenu = item.querySelector('.sub-menu, .dropdown');
-
-            if (link && subMenu) {
-                link.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 1024) {
-                        e.preventDefault();
-                        // Toggle logic for mobile accordion
-                        const isActive = item.classList.contains('submenu-active');
-                        // Close other open submenus at the same level
-                        item.parentElement.querySelectorAll('.submenu-active').forEach(el => {
-                            if (el !== item) el.classList.remove('submenu-active');
-                        });
-                        item.classList.toggle('submenu-active', !isActive);
-                    }
-                });
-            }
+        const toggleBtns = mainNav.querySelectorAll('.submenu-toggle-btn');
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    const liParent = btn.closest('.split-nav-item');
+                    const isActive = liParent.classList.contains('submenu-active');
+                    
+                    // Close other open submenus at the same level
+                    liParent.parentElement.querySelectorAll('.submenu-active').forEach(el => {
+                        if (el !== liParent) el.classList.remove('submenu-active');
+                    });
+                    
+                    liParent.classList.toggle('submenu-active', !isActive);
+                }
+            });
         });
     }
 

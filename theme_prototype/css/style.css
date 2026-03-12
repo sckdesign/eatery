@@ -1,4 +1,4 @@
-﻿/*
+/*
 Theme Name: Eatery Essentials
 Theme URI: https://eateryessentials.com
 Author: Antigravity
@@ -4931,5 +4931,95 @@ body {
 @media (max-width: 900px) {
     .lead-container {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Split Navigation (Mobile Submenu Toggle) */
+.nav-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-item-header a {
+    flex-grow: 1;
+}
+
+.submenu-toggle-btn {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.submenu-toggle-btn i {
+    transition: transform var(--transition-fast);
+}
+
+.submenu-active > .nav-item-header .submenu-toggle-btn i {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 1025px) {
+    .submenu-toggle-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-item-header {
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .nav-item-header a {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .submenu-toggle-btn {
+        padding: 1rem;
+        border-left: 1px solid rgba(0,0,0,0.05);
+        height: 100%;
+    }
+    
+    .submenu-toggle-btn:hover {
+        background: rgba(0, 157, 66, 0.05);
+        color: var(--primary);
+    }
+}
+
+/* --- Desktop Dropdown Arrows for Split Nav --- */
+@media (min-width: 1025px) {
+    .main-nav .split-nav-item > .nav-item-header > a::after {
+        content: '\f107';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        margin-left: 8px;
+        font-size: 0.8rem;
+        opacity: 0.7;
+        transition: transform var(--transition-fast);
+        display: inline-block;
+    }
+
+    .main-nav > ul > .split-nav-item > .nav-item-header > a::after,
+    .main-nav > .menu > .split-nav-item > .nav-item-header > a::after {
+        display: none !important;
+    }
+
+    .main-nav .split-nav-item:hover > .nav-item-header > a::after {
+        transform: rotate(180deg);
+    }
+
+    .main-nav .sub-menu .split-nav-item > .nav-item-header > a::after {
+        content: '\25B6' !important;
+        font-size: 0.7rem;
+        transform: none !important;
     }
 }
