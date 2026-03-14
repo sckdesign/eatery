@@ -196,6 +196,31 @@ function processFile(filePath) {
         }
     }
 
+    // Ensure Google Analytics is present
+    const gaTrackingId = 'G-8XEJ1K5YZ2'; // Replace with actual ID
+    const gaHTML = `
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${gaTrackingId}');
+    </script>`;
+
+    if (!content.includes('gtag.js')) {
+        const headCloseMatch = /<\/head>/i;
+        if (headCloseMatch.test(content)) {
+            content = content.replace(headCloseMatch, gaHTML + '\n</head>');
+            modified = true;
+            console.log('Injected Google Analytics in ' + filePath);
+        }
+    } else if (content.includes('G-YOUR_TRACKING_ID')) {
+        content = content.replace(/G-YOUR_TRACKING_ID/g, gaTrackingId);
+        modified = true;
+        console.log('Updated Google Analytics ID in ' + filePath);
+    }
+
     if (modified) {
         fs.writeFileSync(filePath, content);
     }
